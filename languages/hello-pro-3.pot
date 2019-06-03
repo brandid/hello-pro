@@ -1,0 +1,142 @@
+# Copyright (C) 2019 Hello Pro
+# This file is distributed under the same license as the Hello Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hello Pro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: page_landing.php:10, page-templates/landing.php:7
+msgid "Landing"
+msgstr ""
+
+#: config/menus.php:13
+msgid "Header Menu"
+msgstr ""
+
+#: config/menus.php:14
+msgid "Footer Menu"
+msgstr ""
+
+#: config/onboarding.php:16
+msgid "Atomic Blocks"
+msgstr ""
+
+#: config/onboarding.php:21
+msgid "Social Proof Slider"
+msgstr ""
+
+#: config/onboarding.php:26
+msgid "Simple Social Icons"
+msgstr ""
+
+#: lib/customize.php:36
+msgid "Site Title Display"
+msgstr ""
+
+#: lib/customize.php:40
+msgid "Show Title & Tagline"
+msgstr ""
+
+#: lib/customize.php:41
+msgid "Show Logo Image"
+msgstr ""
+
+#: lib/customize.php:50
+msgid "Sticky Header"
+msgstr ""
+
+#: lib/customize.php:65
+msgid "Turn OFF the Sticky Header Navigation — (no \"sticky\" behavior)"
+msgstr ""
+
+#: lib/customize.php:88
+msgid "Change the main accent color used in various elements in the theme."
+msgstr ""
+
+#: lib/customize.php:89
+msgid "Primary/Accent Color"
+msgstr ""
+
+#: lib/customize.php:111
+msgid "Change the hover color for buttons."
+msgstr ""
+
+#: lib/customize.php:112
+msgid "Secondary Color"
+msgstr ""
+
+#: lib/load-scripts.php:21
+msgid "Menu"
+msgstr ""
+
+#: lib/load-scripts.php:23
+msgid "Submenu"
+msgstr ""
+
+#: lib/widget-setup.php:16
+msgid "Home - Welcome"
+msgstr ""
+
+#: lib/widget-setup.php:17
+msgid "Introduce yourself! Welcome visitors to your homepage by using a text widget in this space with up to 200 characters of establishing copy."
+msgstr ""
+
+#: lib/widget-setup.php:21
+msgid "Home - Intro"
+msgstr ""
+
+#: lib/widget-setup.php:22
+msgid "Setup your message. Add a few brief teaser sentences here, to keep users scrolling further down the Homepage."
+msgstr ""
+
+#: lib/widget-setup.php:26
+msgid "Home - Call To Action"
+msgstr ""
+
+#: lib/widget-setup.php:27
+msgid "Engage your audience. Add your primary call to action text and opt-in form here. Think about what you value you can offer in exchange for their valuable email address."
+msgstr ""
+
+#: lib/widget-setup.php:31
+msgid "Home - Features"
+msgstr ""
+
+#: lib/widget-setup.php:32
+msgid "This three-column widget area can display text, recent posts, or page excerpts. We recommend highlighting three services, products, or features of your business, practice, or organization."
+msgstr ""
+
+#: lib/widget-setup.php:36
+msgid "Home - Statement"
+msgstr ""
+
+#: lib/widget-setup.php:37
+msgid "Make a bold statement! Put up to 70 characters of text here."
+msgstr ""
+
+#: lib/widget-setup.php:41
+msgid "Home - Portfolio"
+msgstr ""
+
+#: lib/widget-setup.php:42
+msgid "Show off your work. Use featured images to pull 3, 6, or 9 portfolio items into this homepage feature area. Also works with posts or pages."
+msgstr ""
+
+#: lib/widget-setup.php:46
+msgid "Home - Testimonial"
+msgstr ""
+
+#: lib/widget-setup.php:47
+msgid "Let others do the talking. Feature a client quote or testimonial (or other content) in this space at the bottom of your homepage."
+msgstr ""
+
+#: page-templates/blocks.php:7
+msgid "Blocks"
+msgstr ""

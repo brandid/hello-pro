@@ -1,0 +1,29 @@
+{
+    "name": "hello-pro-3",
+    "version": "3.0.1",
+    "description": "Hello! Pro Theme version 3",
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/brandid/hellopro3"
+    },
+    "author": "The brandiD",
+    "license": "GPL-2.0",
+    "bugs": {
+        "url": "https://bitbucket.org/brandid/hellopro3"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^3.1.0",
+        "gulp-notify": "^2.2.0",
+        "gulp-plumber": "^1.1.0",
+        "gulp-postcss": "^6.1.1",
+        "gulp-rename": "^1.2.2",
+        "postcss-pxtorem": "^4.0.1",
+        "gulp-wp-pot": "^2.0.4",
+        "gulp-zip": "^4.0.0"
+    },
+    "dependencies": {
+        "del": "^2.2.2",
+        "npm": "^6.4.1"
+    }
+}
