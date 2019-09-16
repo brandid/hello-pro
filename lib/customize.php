@@ -15,8 +15,6 @@
 add_action( 'customize_register', 'hellopro_register_customizer' );
 function hellopro_register_customizer() {
 
-	/*  START CUSTOMIZER CODE
-	------------------------------------------------------------------------- */
 	global $wp_customize;
 
 	/* SITE TITLE DISPLAY
@@ -44,19 +42,52 @@ function hellopro_register_customizer() {
 		)
 	);
 
-	/* STICKY HEADER SECTION
-	--------------------------------------------------------------------- */
+	// Add 'Hello! Pro Settings' Panel.
+	$wp_customize->add_section(
+		'hellopro_settings',
+		array(
+			'title'    => __( 'Hello! Pro Settings', 'hello-pro' ),
+			'priority' => 30,
+		)
+	);
+
+	// Add Blog Carousel Setting.
+	$wp_customize->add_setting(
+		'enable_blog_carousel',
+		array(
+			'default'           => true,
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'hellopro_sanitize_checkbox',
+		)
+	);
+
+	// Add Blog Carousel Control.
+	$wp_customize->add_control(
+		new Hello_Pro_Toggle_Control(
+			$wp_customize,
+			'enable_blog_carousel',
+			array(
+				'label'       => __( 'Blog "Featured Articles" Slider', 'hello-pro' ),
+				'section'     => 'hellopro_settings',
+				'settings'    => 'enable_blog_carousel',
+				'description' => __( 'Enable or Disable the Featured Articles Carousel Slider on the Blog Archive pages.', 'hello-pro' ),
+			)
+		)
+	);
+
 	$wp_customize->add_section('header_settings' , array(
 			'title'     => __( 'Sticky Header', 'hello-pro' ),
 			'priority'  => 70,
 	));
 
+	// Add Sticky Header Setting.
 	$wp_customize->add_setting('fixed_header_off', array(
 			'default'    => false,
 			'type'     => 'theme_mod',
 			'sanitize_callback' => 'hellopro_sanitize_checkbox',
 	));
 
+	// Add Sticky Header Control.
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,

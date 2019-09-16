@@ -1,6 +1,6 @@
 <?php
 /**
- * Hello Pro 3
+ * Hello! Pro 3
  *
  * This file adds functions to the Hello Pro 3 Theme.
  *
@@ -36,6 +36,9 @@ function hello_pro_localization_setup() {
 
 // Add helper functions
 require_once( get_stylesheet_directory() . '/lib/helper-functions.php' );
+
+// Import Customizer custom toggle control.
+require_once get_stylesheet_directory() . '/lib/class-hello-pro-toggle-control.php';
 
 // Add Customizer settings
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
