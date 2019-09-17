@@ -28,8 +28,10 @@ remove_filter( 'get_search_form', 'genesis_search_form' );
 // Sticky Nav - Add a body class if "Sticky Nav" option is not disabled
 add_filter( 'body_class', 'hellopro_stickynav_body_class' );
 function hellopro_stickynav_body_class( $classes ) {
-    $fixed_header_off = get_theme_mod( 'fixed_header_off', false );
-    $classes[] = ($fixed_header_off ? '' : 'sticky-header');
+
+    $sticky_header = get_theme_mod( 'sticky_header', true );
+	$classes[]     = ( $sticky_header ? 'sticky-header' : '' );
+
     return $classes;
 }
 

@@ -51,6 +51,30 @@ function hellopro_register_customizer() {
 		)
 	);
 
+	// Add Sticky Header Setting.
+	$wp_customize->add_setting(
+		'sticky_header',
+		array(
+			'default'           => true,
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'hellopro_sanitize_checkbox',
+		)
+	);
+
+	// Add Sticky Header Control.
+	$wp_customize->add_control(
+		new Hello_Pro_Toggle_Control(
+			$wp_customize,
+			'sticky_header',
+			array(
+				'label'       => __( 'Sticky Header', 'hello-pro' ),
+				'section'     => 'hellopro_settings',
+				'settings'    => 'sticky_header',
+				'description' => __( 'Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices.', 'hello-pro' ),
+			)
+		)
+	);
+
 	// Add Blog Carousel Setting.
 	$wp_customize->add_setting(
 		'enable_blog_carousel',
@@ -71,32 +95,6 @@ function hellopro_register_customizer() {
 				'section'     => 'hellopro_settings',
 				'settings'    => 'enable_blog_carousel',
 				'description' => __( 'Enable or Disable the Featured Articles Carousel Slider on the Blog Archive pages.', 'hello-pro' ),
-			)
-		)
-	);
-
-	$wp_customize->add_section('header_settings' , array(
-			'title'     => __( 'Sticky Header', 'hello-pro' ),
-			'priority'  => 70,
-	));
-
-	// Add Sticky Header Setting.
-	$wp_customize->add_setting('fixed_header_off', array(
-			'default'    => false,
-			'type'     => 'theme_mod',
-			'sanitize_callback' => 'hellopro_sanitize_checkbox',
-	));
-
-	// Add Sticky Header Control.
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'fixed_header_off',
-			array(
-				'label'     => __( 'Turn OFF the Sticky Header Navigation — (no "sticky" behavior)', 'hello-pro' ),
-				'section'   => 'header_settings',
-				'settings'  => 'fixed_header_off',
-				'type'      => 'checkbox',
 			)
 		)
 	);

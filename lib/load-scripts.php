@@ -39,7 +39,7 @@ add_action( 'wp_enqueue_scripts', 'hello_pro_load_scripts' );
 function hello_pro_load_scripts() {
 
 	// Get Sticky Header setting - to determine if we enqueue the JS
-	$fixed_header_off = get_theme_mod( 'fixed_header_off', false );
+    $sticky_header = get_theme_mod( 'sticky_header', true );
 
 	// Dashicons
 	wp_enqueue_style( 'dashicons' );
@@ -56,7 +56,7 @@ function hello_pro_load_scripts() {
 	wp_localize_script( 'hello-pro-responsive-menu', 'genesis_responsive_menu', hello_pro_responsive_menu_settings() );
 
 	// If sticky header is not disabled
-	if ( false === $fixed_header_off ) {
+	if ( $sticky_header ) {
 
 		// Custom scripts.
 		wp_enqueue_script( 'hello-pro-debounce', get_stylesheet_directory_uri() . '/js/debounce.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
