@@ -1384,12 +1384,48 @@ ul#menu-primary-navigation {
 	list-style-type: none;
 }
 
+/* Blog
+--------------------------------------------- */
+
+/* Blog Categories List */
+.entry-content ul.blog-categories {
+  list-style-type: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 30px 0;
+  padding: 20px 0;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  max-width: 1020px;
+  margin: 0 auto 40px auto;
+}
+
+.entry-content ul.blog-categories > li {
+  list-style-type: none !important;
+  display: inline-block;
+}
+
+.entry-content ul.blog-categories > li a {
+  padding: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 0;
+}
+
 /* Pagination
 --------------------------------------------- */
 .archive-pagination {
 	font-size: 16px;
 	font-size: 1.6rem;
 	padding: 30px 0;
+}
+
+.archive-pagination ul {
+	padding-left: 0;
 }
 
 .archive-pagination li {

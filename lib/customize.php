@@ -99,6 +99,30 @@ function hellopro_register_customizer() {
 		)
 	);
 
+	// Add Blog Categories List Setting.
+	$wp_customize->add_setting(
+		'enable_blog_categories',
+		array(
+			'default'           => true,
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'hellopro_sanitize_checkbox',
+		)
+	);
+
+	// Add Blog Categories List Control.
+	$wp_customize->add_control(
+		new Hello_Pro_Toggle_Control(
+			$wp_customize,
+			'enable_blog_categories',
+			array(
+				'label'       => __( 'Blog Categories List', 'hello-pro' ),
+				'section'     => 'hellopro_settings',
+				'settings'    => 'enable_blog_categories',
+				'description' => __( 'Enable or Disable the list of Blog Categories on Archive pages.', 'hello-pro' ),
+			)
+		)
+	);
+
 	/* PRIMARY COLOR OPTION
 	--------------------------------------------------------------------- */
 	$wp_customize->add_setting(

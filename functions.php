@@ -11,7 +11,7 @@
  */
 
 //* Start the engine
-require_once( get_template_directory() . '/lib/init.php' );
+require_once get_template_directory() . '/lib/init.php';
 
 //* Load constants - use constants in code instead of functions to improve performance. Hat Tip to Tonya at Knowthecode.io.
 $child_theme = wp_get_theme( get_stylesheet_directory() );
@@ -21,7 +21,7 @@ define( 'CHILD_THEME_HANDLE', sanitize_title_with_dashes( wp_get_theme()->get( '
 define( 'CHILD_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 
 // Sets up the Theme
-require_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
+require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 
 // Set Localization (do not remove).
 add_action( 'after_setup_theme', 'hello_pro_localization_setup' );
@@ -35,25 +35,28 @@ function hello_pro_localization_setup() {
 }
 
 // Add helper functions
-require_once( get_stylesheet_directory() . '/lib/helper-functions.php' );
+require_once get_stylesheet_directory() . '/lib/helper-functions.php';
 
 // Import Customizer custom toggle control.
 require_once get_stylesheet_directory() . '/lib/class-hello-pro-toggle-control.php';
 
 // Add Customizer settings
-require_once( get_stylesheet_directory() . '/lib/customize.php' );
+require_once get_stylesheet_directory() . '/lib/customize.php';
 
 // Includes Customizer CSS
-require_once( get_stylesheet_directory() . '/lib/output.php' );
+require_once get_stylesheet_directory() . '/lib/output.php';
 
 // Add Gutenberg functions
 add_action( 'after_setup_theme', 'genesis_child_gutenberg_support' );
 function genesis_child_gutenberg_support() {
-	require_once( get_stylesheet_directory() . '/lib/gutenberg/init.php' );
+	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
 }
 
 // Add scripts and styles
-require_once( get_stylesheet_directory() . '/lib/load-scripts.php' );
+require_once get_stylesheet_directory() . '/lib/load-scripts.php';
 
 // Add Theme setup functions
-require_once( get_stylesheet_directory() . '/lib/theme-setup.php' );
+require_once get_stylesheet_directory() . '/lib/theme-setup.php';
+
+// Add the blog functions.
+require_once get_stylesheet_directory() . '/lib/blog-functions.php';
