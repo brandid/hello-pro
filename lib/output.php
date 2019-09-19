@@ -10,16 +10,77 @@
  * @link    https://thebrandid.com
  */
 
-add_action( 'wp_enqueue_scripts', 'hellopro_homepage_css_output' );
+add_action( 'wp_enqueue_scripts', 'hellopro_css_output' );
 /**
- * Checks the settings for the home page sections.
+ * Adds the custom settings for block colors and font sizes.
  * If any of these value are set the appropriate CSS is output.
  *
  * @since 3.0.1
  */
-function hellopro_homepage_css_output() {
+function hellopro_css_output() {
 
 	$css = '';
+
+	$css .= hello_pro_inline_font_sizes();
+	$css .= hello_pro_inline_color_palette();
+
+	if ( $css ) {
+		wp_add_inline_style( CHILD_THEME_HANDLE, $css );
+	}
+
+}
+
+/**
+ * Generate CSS for editor font sizes from the provided theme support.
+ *
+ * @since 3.0.3
+ *
+ * @return string The CSS for editor font sizes if theme support was declared.
+ */
+function hello_pro_inline_font_sizes() {
+	$css               = '';
+	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
+	if ( ! $editor_font_sizes ) {
+		return '';
+	}
+	foreach ( $editor_font_sizes[0] as $font_size ) {
+		$css .= <<<CSS
+		.site-container .has-{$font_size['slug']}-font-size {
+			font-size: {$font_size['size']}px;
+		}
+CSS;
+	}
+	return $css;
+}
+
+/**
+ * Generate CSS for editor colors based on theme color palette support.
+ *
+ * @since 2.9.0
+ *
+ * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
+ */
+function hello_pro_inline_color_palette() {
+	$css                  = '';
+
+	$appearance           = genesis_get_config( 'appearance' );
+
+	$editor_color_palette = $appearance['editor-color-palette'];
+
+	foreach ( $editor_color_palette as $color_info ) {
+		$css .= <<<CSS
+		.site-container .has-{$color_info['slug']}-color,
+		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-color,
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
+			color: {$color_info['color']};
+		}
+		.site-container .has-{$color_info['slug']}-background-color,
+		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
+		.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
+			background-color: {$color_info['color']};
+		}
+CSS;
+	}
 
 	/* Get Primary Color */
 	$color_primary = get_theme_mod( 'hello_pro_link_color', hello_pro_customizer_get_default_link_color() );
@@ -27,12 +88,8 @@ function hellopro_homepage_css_output() {
 	/* Get Secondary Color */
 	$color_secondary = get_theme_mod( 'hello_pro_accent_color', hello_pro_customizer_get_default_accent_color() );
 
-	/* Begin Custom CSS
-	------------------------------------------------------------------------- */
-
 	/* PRIMARY COLOR
 	------------------------------------------ */
-	// $css .= ( hello_pro_customizer_get_default_link_color() !== $color_primary ) ? sprintf( '
 	$css .= sprintf( '
 		a,
 		.home-features > .wrap > .widget .textwidget > h3 > span,
@@ -79,11 +136,6 @@ function hellopro_homepage_css_output() {
 		}
 
 		/* GUTENBERG */
-		.has-primary-color {
-			color: %s !important;
-		}
-
-		.has-primary-background-color,
 		.entry-content .featured-articles .featured-article {
 			background-color: %s !important;
 		}
@@ -108,7 +160,6 @@ function hellopro_homepage_css_output() {
 	$color_primary,
 	$color_primary,
 	hello_pro_color_contrast( $color_primary ),
-	$color_primary,
 	$color_primary,
 	$color_primary,
 	hello_pro_color_contrast( $color_primary ),
@@ -150,14 +201,6 @@ function hellopro_homepage_css_output() {
 		}
 
 		/* GUTENBERG */
-		.has-secondary-color {
-			color: %s !important;
-		}
-
-		.has-secondary-background-color {
-			background-color: %s !important;
-		}
-
 		.wp-block-button .wp-block-button__link:not(.has-background):hover {
 		    background-color: %s !important;
 			color: %s !important;
@@ -181,8 +224,6 @@ function hellopro_homepage_css_output() {
 	$color_secondary,
 	hello_pro_color_contrast( $color_secondary ),
 	$color_secondary,
-	$color_secondary,
-	$color_secondary,
 	hello_pro_color_contrast( $color_secondary ),
 	$color_secondary,
 	$color_secondary,
@@ -191,9 +232,5 @@ function hellopro_homepage_css_output() {
 	hello_pro_color_contrast( $color_secondary )
 	);
 
-	/* OUTPUT EVERYTHING
-	------------------------------------------ */
-	if ( $css ) {
-		wp_add_inline_style( CHILD_THEME_HANDLE, $css );
-	}
+	return $css;
 }

@@ -38,25 +38,6 @@ ul.aligncenter li {
     border-bottom: none;
 }
 
-/* Font Sizes
---------------------------------------------- */
-
-.site-container p.has-small-font-size {
-	font-size: 12px;
-}
-
-.site-container p.has-regular-font-size {
-	font-size: 16px;
-}
-
-.site-container p.has-large-font-size {
-	font-size: 20px;
-}
-
-.site-container p.has-larger-font-size {
-	font-size: 24px;
-}
-
 /* Drop Caps
 --------------------------------------------- */
 
@@ -604,11 +585,6 @@ hr.wp-block-separator {
 
 /* Extra Classes
 --------------------------------------------- */
-.has-small-font-size,
-p.has-small-font-size {
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
 
 .no-bottom-margin {
     margin-bottom: 0 !important;

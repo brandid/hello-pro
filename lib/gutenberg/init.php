@@ -95,6 +95,11 @@ add_theme_support( 'align-wide' );
 //* Make media embeds responsive
 add_theme_support( 'responsive-embeds' );
 
-// Editor Color Palette
+// Get Hello! Pro Block Editor settings.
 $hello_pro_block_editor_settings = genesis_get_config( 'block-editor-settings' );
+
+// Editor Color Palette
 add_theme_support( 'editor-color-palette', $hello_pro_block_editor_settings['editor-color-palette'] );
+
+// Editor Font Sizes
+add_theme_support( 'editor-font-sizes', $hello_pro_block_editor_settings['editor-font-sizes'] );
