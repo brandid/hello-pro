@@ -37,6 +37,9 @@ function hello_pro_localization_setup() {
 // Add helper functions
 require_once get_stylesheet_directory() . '/lib/helper-functions.php';
 
+// Add the custom meta boxes.
+require_once get_stylesheet_directory() . '/lib/metaboxes.php';
+
 // Import Customizer custom toggle control.
 require_once get_stylesheet_directory() . '/lib/class-hello-pro-toggle-control.php';
 

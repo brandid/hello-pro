@@ -41,6 +41,7 @@ add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
 // Theme Image Sizes
 add_image_size( 'featured', 300, 100, true );
 add_image_size( 'portfolio', 300, 175, true );
+add_image_size( 'featured-article', 800, 800, true );
 
 // Add support for after entry widget
 add_theme_support( 'genesis-after-entry-widget-area' );

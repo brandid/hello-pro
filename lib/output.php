@@ -56,7 +56,10 @@ function hellopro_homepage_css_output() {
 		.entry-meta a:focus,
 		.footer-widgets .entry-title a:hover,
 		.site-footer a:hover,
-		.site-footer a:focus {
+		.site-footer a:focus,
+		.entry-content .featured-articles button.slick-arrow > span,
+		.entry-content .featured-articles ul.slick-dots li button::before,
+		.entry-content .featured-articles ul.slick-dots li.slick-active button:before {
 			color: %s;
 		}
 
@@ -80,7 +83,8 @@ function hellopro_homepage_css_output() {
 			color: %s !important;
 		}
 
-		.has-primary-background-color {
+		.has-primary-background-color,
+		.entry-content .featured-articles .featured-article {
 			background-color: %s !important;
 		}
 
@@ -128,6 +132,7 @@ function hellopro_homepage_css_output() {
 		a.button:focus,
 		button:not(.slick-arrow):hover,
 		button:not(.slick-arrow):focus,
+		button:not(id^="slick-"),
 		input:hover[type="button"],
 		input:hover[type="reset"],
 		input:hover[type="submit"],

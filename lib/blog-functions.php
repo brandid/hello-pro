@@ -10,7 +10,7 @@
  *
  * @return string
  */
-function course_maker_output_category_list() {
+function hello_pro_output_category_list() {
 
 	// Create an array of arguments.
 	$category_args = array(
@@ -41,23 +41,188 @@ function course_maker_output_category_list() {
 }
 
 /**
+ * Outputs all posts with "Featured Article" meta data.
+ *
+ * @return string
+ */
+function hello_pro_show_featured_articles() {
+
+	$args = array(
+		'meta_query' => array(
+			array(
+				'key'     => '_hellopro_featured_article',
+				'value'   => '1',
+				'compare' => '=',
+			),
+		),
+		'ignore_sticky_posts' => 1,
+	);
+
+	// Create a new WP_Query.
+	$featured_article_query = new WP_Query( $args );
+
+	// Exit if no posts are marked as "Featured Articles".
+	if ( ! $featured_article_query->have_posts() ) {
+		return;
+	}
+
+	// Begin Output Buffering.
+	ob_start();
+
+	// Open the featured articles content container.
+	echo '<div class="featured-articles">';
+
+	if ( $featured_article_query->have_posts() ) {
+
+		while ( $featured_article_query->have_posts() ) {
+
+			$featured_article_query->the_post();
+
+			$post_id = get_the_ID();
+
+			// Create character limit for blog post titles.
+			$title_char_limit = 60;
+
+			// Create var with shortened post title.
+			$post_title = substr( get_the_title(), 0, $title_char_limit ); // Limit the title to 60 characters.
+
+			// If title is longer than limit, add ellipses.
+			if ( strlen( $post_title > $title_char_limit ) ) {
+				$post_title .= '...';
+			}
+
+			// Open article container.
+			echo '<div class="featured-article">';
+
+			// Open text container.
+			echo '<div class="text-container">';
+
+			// Show the 'Featured Article' header text.
+			echo '<div class="featured-article-item-header">' . esc_html__( 'Featured Article', 'hellopro' ) . '</div>';
+
+			// Show the Post Title.
+			echo '<h2 class="entry-title"><a href="' . esc_url( get_the_permalink() ) . '" class="entry-title-link">' . esc_html( $post_title ) . '</a></h2>';
+
+			// Open the Author info container.
+			echo '<div class="author-info">';
+
+			// Get the Author info.
+			$the_author    = get_the_author();
+			$the_author_id = get_the_author_meta( 'ID' );
+
+			// Get the link to the Author page.
+			$the_author_link = get_author_posts_url( $the_author_id );
+
+			// Get the categories of the current post.
+			$category = get_the_category();
+
+			// Assign a var to the first category.
+			$first_category = $category[0]->cat_name;
+
+			// Get the link to the first category.
+			$first_category_link = get_category_link( $category[0] );
+
+			// Show the Author Image.
+			echo '<div class="image">';
+
+			echo '<a href="' . esc_html( $the_author_link ) . '">' . get_avatar( $the_author_id, 64 ) . '</a>';
+
+			echo '</div>';
+
+			// Show the Author Text.
+			echo '<div class="author-text">';
+
+			echo '<p class="author-name"><a href="' . esc_html( $the_author_link ) . '">' . esc_html( $the_author ) . '</a></p>';
+
+			echo '<p class="post-category"><a href="' . esc_html( $first_category_link ) . '">' . esc_html( $first_category ) . '</a></p>';
+
+			echo '</div>';
+
+			// Close the Author Info container.
+			echo '</div>';
+
+			// Close the text container.
+			echo '</div>';
+
+			// Show the Featured Image.
+			if ( has_post_thumbnail() ) {
+
+				echo '<div class="featured-img">';
+				echo '<a href="' . esc_url( get_the_permalink() ) . '">';
+				echo get_the_post_thumbnail( $post_id, 'featured-article' );
+				echo '</a>';
+				echo '</div>';
+
+			}
+
+			// Close the article container.
+			echo '</div>';
+
+		}
+	}
+
+	// Close the featured articles content container.
+	echo '</div>';
+
+	// Output the JS.
+	?>
+	<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+
+		/*
+		* Featured Articles Slider
+		* uses Slick JS by Ken Wheeler
+		* configuration options: https://kenwheeler.github.io/slick/
+		--------------------------------------------------------------------- */
+		$(".blog-header-extras .featured-articles").not(".slick-initialized").slick({
+			autoplay: true,
+			autoplaySpeed: 5000,
+			adaptiveHeight: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: false,
+			arrows: true,
+			prevArrow: '<button type="button" class="slick-prev"><span class="fa fa-angle-left"></span></button>',
+			nextArrow: '<button type="button" class="slick-next"><span class="fa fa-angle-right"></span></button>',
+			dots: true,
+			infinite: true,
+		});
+
+	});
+	</script>
+	<?php
+
+	// Save the contents to a var.
+	$output = ob_get_contents();
+
+	// End the Output Buffering.
+	ob_end_clean();
+
+	// Restore the original Post Data.
+	wp_reset_postdata();
+
+	// Return everything.
+	return $output;
+
+}
+
+/**
  * Modify the output of the Blog Header.
  *
  * @return string
  */
-function course_maker_blog_header_output() {
+function hello_pro_blog_header_output() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
 	// Get the Customizer settings.
-	// $enable_blog_carousel   = get_theme_mod( 'enable_blog_carousel', true );
+	$enable_blog_carousel   = get_theme_mod( 'enable_blog_carousel', true );
 	$enable_blog_categories = get_theme_mod( 'enable_blog_categories', true );
 
 	// Exit if both "disable" Customizer settings are disabled.
-	// if ( ! $enable_blog_carousel && ! $enable_blog_categories ) {
-    if ( ! $enable_blog_categories ) {
+	if ( ! $enable_blog_carousel && ! $enable_blog_categories ) {
 		return;
 	}
 
@@ -69,19 +234,19 @@ function course_maker_blog_header_output() {
 	echo '<div class="alignfull" style="padding: 0 8%;">';
 	echo '<div class="container-content" style="max-width: 1200px; margin: 0 auto;">';
 
-	// // Show the Featured Articles slider.
-	// if ( $enable_blog_carousel ) {
-    //
-	// 	$featured_articles_items = course_maker_show_featured_articles();
-    //
-	// 	echo $featured_articles_items; // phpcs:ignore
-    //
-	// }
+	// Show the Featured Articles slider.
+	if ( $enable_blog_carousel ) {
+
+		$featured_articles_items = hello_pro_show_featured_articles();
+
+		echo $featured_articles_items; // phpcs:ignore
+
+	}
 
 	// Show the Blog Categories list.
 	if ( $enable_blog_categories ) {
 
-		$categories_list = course_maker_output_category_list();
+		$categories_list = hello_pro_output_category_list();
 
 		echo $categories_list; // phpcs:ignore
 
@@ -100,4 +265,4 @@ function course_maker_blog_header_output() {
 	echo $content; // phpcs:ignore
 
 }
-add_action( 'genesis_before_loop', 'course_maker_blog_header_output', 20 );
+add_action( 'genesis_before_loop', 'hello_pro_blog_header_output', 20 );
