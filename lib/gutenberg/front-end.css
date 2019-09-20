@@ -478,6 +478,8 @@ pre.wp-block-code {
 
 .site-container .wp-block-code code {
     color: #666;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
 }
 
 /* Verse

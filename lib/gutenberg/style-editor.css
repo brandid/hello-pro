@@ -425,6 +425,14 @@ p.has-larger-font-size {
 	line-height: 1.625 !important;
 }
 
+/* Code
+--------------------------------------------- */
+.wp-block-code .block-editor-plain-text {
+	color: #666;
+    font-family: 'Courier New', monospace;
+    font-size: 17px;
+}
+
 /* Separators
 --------------------------------------------- */
 
