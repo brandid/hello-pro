@@ -618,12 +618,15 @@ hr.wp-block-separator {
 	text-align: center;
 }
 
+.page-template-blocks main.content {
+    padding-bottom: 0;
+}
+
 /* Home
 --------------------------------------------- */
 
-.page-template-blocks main.content {
+.home.page-template-blocks main.content {
     padding-top: 0;
-    padding-bottom: 0;
 }
 
 .page-template-blocks .content .entry-header {
