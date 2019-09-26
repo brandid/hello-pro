@@ -10,17 +10,19 @@
 * @link    http://www.studiopress.com/
 */
 
-// Add HTML5 markup structure
-add_theme_support( 'html5', genesis_get_config( 'html5' ) );
+add_action( 'after_setup_theme', 'hello_pro_theme_support', 9 );
+/**
+ * Adds theme supports.
+ */
+function hello_pro_theme_support() {
 
-// Add Accessibility support
-add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
+	$theme_supports = genesis_get_config( 'theme-supports' );
 
-// Add viewport meta tag for mobile browsers
-add_theme_support( 'genesis-responsive-viewport' );
+	foreach ( $theme_supports as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
 
-// Adds custom logo in Customizer > Site Identity.
-add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
+}
 
 // Use the search form from WordPress core
 remove_filter( 'get_search_form', 'genesis_search_form' );
@@ -35,19 +37,10 @@ function hellopro_stickynav_body_class( $classes ) {
     return $classes;
 }
 
-// Renames primary and secondary navigation menus.
-add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
-
 // Theme Image Sizes
 add_image_size( 'featured', 300, 100, true );
 add_image_size( 'portfolio', 300, 175, true );
 add_image_size( 'featured-article', 800, 800, true );
-
-// Add support for after entry widget
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-// Add support for 3-column footer widgets
-add_theme_support( 'genesis-footer-widgets', 3 );
 
 // Removes header right widget area
 unregister_sidebar( 'header-right' );
