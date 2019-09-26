@@ -46,5 +46,5 @@ function bid_hello_pro_sample_social_default_styles( $defaults ) {
 
 }
 
-//* Ensure full-width content is the default layout upon theme activation
+// Ensure full-width content is the default layout upon theme activation.
 genesis_set_default_layout( 'full-width-content' );

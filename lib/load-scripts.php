@@ -35,8 +35,10 @@
  }
 
 //* Enqueue Styles and Scripts
-add_action( 'wp_enqueue_scripts', 'hello_pro_load_scripts' );
-function hello_pro_load_scripts() {
+add_action( 'wp_enqueue_scripts', 'hello_pro_load_scripts_styles' );
+function hello_pro_load_scripts_styles() {
+
+	$appearance = genesis_get_config( 'appearance' );
 
 	// Get Sticky Header setting - to determine if we enqueue the JS
     $sticky_header = get_theme_mod( 'sticky_header', true );
@@ -45,23 +47,23 @@ function hello_pro_load_scripts() {
 	wp_enqueue_style( 'dashicons' );
 
 	// FontAwesome
-	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'], array(), genesis_get_theme_version() );
 
 	// Google Fonts
-	wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css?family=Lato:400,700,900|Quicksand:700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-font', $appearance['fonts-url'], array(), genesis_get_theme_version() );
 
 	// Responsive menu
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( 'hello-pro-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'hello-pro-responsive-menu', get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js", array( 'jquery' ), genesis_get_theme_version(), true );
 	wp_localize_script( 'hello-pro-responsive-menu', 'genesis_responsive_menu', hello_pro_responsive_menu_settings() );
 
 	// If sticky header is not disabled
 	if ( $sticky_header ) {
 
 		// Custom scripts.
-		wp_enqueue_script( 'hello-pro-debounce', get_stylesheet_directory_uri() . '/js/debounce.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+		wp_enqueue_script( 'hello-pro-debounce', get_stylesheet_directory_uri() . '/js/debounce.js', array( 'jquery' ), genesis_get_theme_version(), true );
 
-		wp_enqueue_script( 'sticky-nav-script', get_stylesheet_directory_uri() . '/js/sticky-nav.js', array( 'hello-pro-debounce' ), CHILD_THEME_VERSION, true );
+		wp_enqueue_script( 'sticky-nav-script', get_stylesheet_directory_uri() . '/js/sticky-nav.js', array( 'hello-pro-debounce' ), genesis_get_theme_version(), true );
 
 	}
 }

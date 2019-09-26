@@ -19,13 +19,15 @@ add_action( 'enqueue_block_editor_assets', 'hellopro_gutenberg_editor_customizer
  */
 function hellopro_gutenberg_editor_customizer_css_output() {
 
+	$appearance = genesis_get_config( 'appearance' );
+
 	$css = '';
 
 	/* Get Primary Color */
-	$color_primary = get_theme_mod( 'hello_pro_link_color', '#ce461c' );
+	$color_primary = get_theme_mod( 'hello_pro_link_color', $appearance['default-colors']['primary'] );
 
 	/* Get Secondary Color */
-	$color_secondary = get_theme_mod( 'hello_pro_accent_color', '#53796e' );
+	$color_secondary = get_theme_mod( 'hello_pro_accent_color', $appearance['default-colors']['secondary'] );
 
 	/* Begin Custom CSS
 	------------------------------------------------------------------------- */

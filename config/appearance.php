@@ -1,34 +1,34 @@
 <?php
 /**
- * Block Editor settings specific to Hello! Pro
+ * Hello! Pro appearance settings
  *
  * @package Hello Pro
- * @author  StudioPress
+ * @author  brandiD
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
  */
 
-/**
- * Editor color palette config.
- */
+$hello_pro_default_colors = array(
+	'primary'   => '#ce461c',
+	'secondary' => '#53796e',
+);
 
-/* Get Primary Color */
-$color_primary = get_theme_mod( 'hello_pro_link_color', '#ce461c' );
+$hello_pro_primary_color   = get_theme_mod( 'hello_pro_link_color', $hello_pro_default_colors['primary'] );
+$hello_pro_secondary_color = get_theme_mod( 'hello_pro_accent_color', $hello_pro_default_colors['secondary'] );
 
-/* Get Secondary Color */
-$color_secondary = get_theme_mod( 'hello_pro_accent_color', '#53796e' );
-
-return array(
+$appearance = array(
+	'fonts-url'            => '//fonts.googleapis.com/css?family=Lato:400,700,900|Quicksand:700&display=swap',
+	'fontawesome-css-url'  => '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css',
+	'default-colors'       => $hello_pro_default_colors,
 	'editor-color-palette' => array(
 		array(
 			'name'  => __( 'Primary Color', 'hello-pro' ),
 			'slug'  => 'primary',
-			'color' => $color_primary,
+			'color' => $hello_pro_primary_color,
 		),
 		array(
 			'name'  => __( 'Secondary Color', 'hello-pro' ),
 			'slug'  => 'secondary',
-			'color' => $color_secondary,
+			'color' => $hello_pro_secondary_color,
 		),
 		array(
 			'name'  => __( 'Background Canary', 'hello-pro' ),
@@ -74,3 +74,5 @@ return array(
 		),
 	),
 );
+
+return $appearance;

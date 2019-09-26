@@ -17,6 +17,8 @@ function hellopro_register_customizer() {
 
 	global $wp_customize;
 
+	$appearance = genesis_get_config( 'appearance' );
+
 	/* SITE TITLE DISPLAY
 	--------------------------------------------------------------------- */
 	$wp_customize->add_setting('site_title_display', array(
@@ -128,7 +130,7 @@ function hellopro_register_customizer() {
 	$wp_customize->add_setting(
 		'hello_pro_link_color',
 		array(
-			'default'           => hello_pro_customizer_get_default_link_color(),
+			'default'           => $appearance['default-colors']['primary'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -151,7 +153,7 @@ function hellopro_register_customizer() {
 	$wp_customize->add_setting(
 		'hello_pro_accent_color',
 		array(
-			'default'           => hello_pro_customizer_get_default_accent_color(),
+			'default'           => $appearance['default-colors']['primary'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);

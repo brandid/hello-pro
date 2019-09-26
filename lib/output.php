@@ -21,6 +21,10 @@ function hellopro_css_output() {
 
 	$css = '';
 
+	$css .= '
+		/* ---- OUTPUT.PHP ---- */
+	';
+
 	$css .= hello_pro_inline_font_sizes();
 	$css .= hello_pro_inline_color_palette();
 
@@ -39,17 +43,25 @@ function hellopro_css_output() {
  */
 function hello_pro_inline_font_sizes() {
 	$css               = '';
-	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
+	$appearance        = genesis_get_config( 'appearance' );
+	$editor_font_sizes = $appearance['editor-font-sizes'];
+
 	if ( ! $editor_font_sizes ) {
 		return '';
 	}
-	foreach ( $editor_font_sizes[0] as $font_size ) {
-		$css .= <<<CSS
-		.site-container .has-{$font_size['slug']}-font-size {
-			font-size: {$font_size['size']}px;
+
+	foreach ( $editor_font_sizes as $font_size ) {
+		$css .= sprintf(
+			'
+		.site-container .has-%s-font-size {
+			font-size: %spx;
 		}
-CSS;
+			',
+			$font_size['slug'],
+			$font_size['size']
+		);
 	}
+
 	return $css;
 }
 
@@ -61,32 +73,49 @@ CSS;
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
 function hello_pro_inline_color_palette() {
-	$css                  = '';
+	$css = '';
 
-	$appearance           = genesis_get_config( 'appearance' );
+	$appearance = genesis_get_config( 'appearance' );
 
 	$editor_color_palette = $appearance['editor-color-palette'];
 
 	foreach ( $editor_color_palette as $color_info ) {
-		$css .= <<<CSS
-		.site-container .has-{$color_info['slug']}-color,
-		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-color,
-		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-{$color_info['slug']}-color {
-			color: {$color_info['color']};
+
+		$css .= sprintf(
+		'
+		.site-container .has-%s-color,
+		.site-container .wp-block-button .wp-block-button__link.has-%s-color,
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-%s-color {
+			color: %s;
 		}
-		.site-container .has-{$color_info['slug']}-background-color,
-		.site-container .wp-block-button .wp-block-button__link.has-{$color_info['slug']}-background-color,
-		.site-container .wp-block-pullquote.is-style-solid-color.has-{$color_info['slug']}-background-color {
-			background-color: {$color_info['color']};
+		',
+		$color_info['slug'],
+		$color_info['slug'],
+		$color_info['slug'],
+		$color_info['color']
+		);
+
+		$css .= sprintf(
+		'
+		.site-container .has-%s-background-color,
+		.site-container .wp-block-button .wp-block-button__link.has-%s-background-color,
+		.site-container .wp-block-pullquote.is-style-solid-color.has-%s-background-color {
+			background-color: %s;
 		}
-CSS;
+		',
+		$color_info['slug'],
+		$color_info['slug'],
+		$color_info['slug'],
+		$color_info['color']
+		);
+
 	}
 
 	/* Get Primary Color */
-	$color_primary = get_theme_mod( 'hello_pro_link_color', hello_pro_customizer_get_default_link_color() );
+	$color_primary = get_theme_mod( 'hello_pro_link_color', $appearance['default-colors']['primary'] );
 
 	/* Get Secondary Color */
-	$color_secondary = get_theme_mod( 'hello_pro_accent_color', hello_pro_customizer_get_default_accent_color() );
+	$color_secondary = get_theme_mod( 'hello_pro_accent_color', $appearance['default-colors']['secondary'] );
 
 	/* PRIMARY COLOR
 	------------------------------------------ */

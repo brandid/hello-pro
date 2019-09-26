@@ -1,11 +1,11 @@
 <?php
 /**
-* Loads Gutenberg functions for Hello! Pro theme.
-*
-* @since 3.0.0
-*
-* @package Hello Pro Theme
-*/
+ * Loads Gutenberg functions for Hello! Pro theme.
+ *
+ * @since 3.0.0
+ *
+ * @package Hello Pro Theme
+ */
 
 //* Gutenberg Front-end styles
 add_action( 'wp_enqueue_scripts', 'hellopro_gutenberg_page_styles' );
@@ -16,7 +16,7 @@ function hellopro_gutenberg_page_styles() {
 		'hellopro-gutenberg-frontend-styles',
 		get_stylesheet_directory_uri() . "/lib/gutenberg/front-end.css",
 		array( CHILD_THEME_HANDLE ),
-		CHILD_THEME_VERSION
+		genesis_get_theme_version()
 	);
 
 }
@@ -25,16 +25,19 @@ function hellopro_gutenberg_page_styles() {
 add_action( 'enqueue_block_editor_assets', 'hellopro_gutenberg_editor_styles' );
 function hellopro_gutenberg_editor_styles() {
 
+	// Get Appearance Settings.
+	$appearance = genesis_get_config( 'appearance' );
+
 	// Fonts
-	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
-	wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css?family=Lato:400,700,900|Quicksand:700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'], array(), genesis_get_theme_version() );
+	wp_enqueue_style( 'google-font', $appearance['fonts-url'], array(), genesis_get_theme_version() );
 
 	// Custom Editor Styles
 	wp_enqueue_style(
 		'hellopro-gutenberg-editor-styles',
 		get_stylesheet_directory_uri() . ('/lib/gutenberg/style-editor.css'),
 		array(),
-		CHILD_THEME_VERSION,
+		genesis_get_theme_version(),
 		true
 	);
 
@@ -95,11 +98,11 @@ add_theme_support( 'align-wide' );
 //* Make media embeds responsive
 add_theme_support( 'responsive-embeds' );
 
-// Get Hello! Pro Block Editor settings.
-$hello_pro_block_editor_settings = genesis_get_config( 'block-editor-settings' );
+// Get the Block Editor Settings.
+$appearance = genesis_get_config( 'appearance' );
 
 // Editor Color Palette
-add_theme_support( 'editor-color-palette', $hello_pro_block_editor_settings['editor-color-palette'] );
+add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
 
 // Editor Font Sizes
-add_theme_support( 'editor-font-sizes', $hello_pro_block_editor_settings['editor-font-sizes'] );
+add_theme_support( 'editor-font-sizes', $appearance['editor-font-sizes'] );

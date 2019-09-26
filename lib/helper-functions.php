@@ -11,30 +11,6 @@
  */
 
 /**
- * Get default link color for Customizer.
- * Abstracted here since at least two functions use it.
- *
- * @since 3.0.1
- *
- * @return string Hex color code for link color.
- */
-function hello_pro_customizer_get_default_link_color() {
-	return '#ce461c';
-}
-
-/**
- * Get default accent color for Customizer.
- * Abstracted here since at least two functions use it.
- *
- * @since 3.0.1
- *
- * @return string Hex color code for accent color.
- */
-function hello_pro_customizer_get_default_accent_color() {
-	return '#53796e';
-}
-
-/**
  * Calculate the color contrast.
  *
  * @since 3.0.1

@@ -50,44 +50,6 @@ ul.aligncenter li {
 	margin-right: 0.01em;
 }
 
-/* Colors
---------------------------------------------- */
-.site-container .has-primary-color {
-    color: #ce461c;
-}
-
-.site-container .has-primary-background-color {
-    background-color: #ce461c;
-}
-
-.site-container .has-secondary-color {
-    color: #53796e;
-}
-
-.site-container .has-secondary-background-color {
-    background-color: #53796e;
-}
-
-.site-container .has-canary-color {
-    color: #fffcf5 !important;
-}
-
-.site-container .has-white-color {
-	color: #fff !important;
-}
-
-.site-container .has-dark-gray-color {
-	color: #333 !important;
-}
-
-.site-container .has-black-color {
-	color: #000 !important;
-}
-
-.site-container .wp-block-button:not(.is-style-outline) .has-white-background-color {
-    background-color: #fff !important;
-}
-
 /* Background Color
 --------------------------------------------- */
 
