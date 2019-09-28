@@ -501,6 +501,14 @@ pre.wp-block-code {
 	text-decoration: none;
 }
 
+.wp-block-atomic-blocks-ab-columns.alignfull {
+    padding: 0 30px;
+}
+
+.wp-block-atomic-blocks-ab-columns.alignfull > .ab-layout-column-wrap {
+    margin: 0 15px;
+}
+
 @media only screen and (max-width: 510px) {
 
     .ab-block-container.alignfull::before {

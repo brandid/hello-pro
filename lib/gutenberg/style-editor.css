@@ -728,11 +728,18 @@ p.has-huge-font-size.title {
     border-radius: 50%;
 }
 
+/* AB ADVANCED COLUMNS BLOCK
+--------------------------------------------- */
+.block-editor-block-list__layout .block-editor-block-list__block[data-type="atomic-blocks/ab-columns"][data-align="full"] {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 /* MEDIA QUERIES
 ----------------------------------------------------------------------------- */
 @media only screen and (min-width: 960px) {
 
-    .alignwide {
+    .alignwide:not(.wp-block-atomic-blocks-ab-columns) {
         margin-left: -180px;
         margin-right: -180px;
         max-width: 1062px;
