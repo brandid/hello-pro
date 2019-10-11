@@ -40,7 +40,7 @@ ul.aligncenter li {
 
 /* First Blocks
 --------------------------------------------- */
-.first-block-atomic-blocks-ab-container #genesis-content {
+.first-block-atomic-blocks-ab-container main.content {
     padding-top: 0;
 }
 
