@@ -9,14 +9,14 @@
 Yours can be a wildly bold hello or a more smooth, subtle hello depending on the colors, fonts and images you use with this template. A site like this says to your visitors, "Welcome! Come on in, get comfortable, and let me share a little (or a lot) about myself."
 
 ## Purchase Theme
-https://thebrandidthemes.com/product/hello-personal-branding-wordpress-theme/
+https://buildmybrandid.com/product/hello-personal-branding-wordpress-theme/
 
 ## Theme Demo
 https://demo.hellopro.personalbranding.thebrandid.com/
 
 ## Installation
 For Theme installation and setup documentation, please visit:
-https://thebrandidthemes.com/docs/hello-pro-3-theme-setup/
+https://buildmybrandid.com/docs/hello-pro-3-theme-setup/
 
 ## Support Forum
-Please visit https://thebrandidthemes.com/forum/support/themes/hello-pro-3/ for theme support.
+Please visit https://buildmybrandid.com/forum/support/themes/hello-pro-3/ for theme support.
