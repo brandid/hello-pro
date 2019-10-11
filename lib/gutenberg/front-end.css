@@ -38,6 +38,12 @@ ul.aligncenter li {
     border-bottom: none;
 }
 
+/* First Blocks
+--------------------------------------------- */
+.first-block-atomic-blocks-ab-container #genesis-content {
+    padding-top: 0;
+}
+
 /* Drop Caps
 --------------------------------------------- */
 
