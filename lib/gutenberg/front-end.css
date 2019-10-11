@@ -610,11 +610,11 @@ hr.wp-block-separator {
 }
 
 .page-template-blocks .welcome .wp-block-cover-text,
-.page-template-blocks .welcome .has-huge-font-size,
+.page-template-blocks .welcome .has-large-font-size,
 .page-template-blocks .statement .wp-block-cover-text,
-.page-template-blocks .statement .has-huge-font-size,
-p.has-huge-font-size.title {
-    font-size: 40px;
+.page-template-blocks .statement .has-large-font-size,
+p.has-large-font-size.title {
+    font-size: 40px !important;
     line-height: normal;
     text-transform: uppercase;
 }
@@ -822,11 +822,11 @@ p.has-huge-font-size.title {
 @media screen and (min-width: 1023px) {
 
     .page-template-blocks .welcome .wp-block-cover-text,
-    .page-template-blocks .welcome .has-huge-font-size,
+    .page-template-blocks .welcome .has-large-font-size,
     .page-template-blocks .statement .wp-block-cover-text,
-    .page-template-blocks .statement .has-huge-font-size,
-    p.has-huge-font-size.title {
-        font-size: 50px;
+    .page-template-blocks .statement .has-large-font-size,
+    p.has-large-font-size.title {
+        font-size: 50px !important;
     }
 
     .page-template-blocks .welcome .wp-block-cover-text,
@@ -899,11 +899,11 @@ p.has-huge-font-size.title {
     }
 
     .page-template-blocks .welcome .wp-block-cover-text,
-    .page-template-blocks .welcome .has-huge-font-size,
+    .page-template-blocks .welcome .has-large-font-size,
     .page-template-blocks .statement .wp-block-cover-text,
-    .page-template-blocks .statement .has-huge-font-size,
-    p.has-huge-font-size.title {
-        font-size: 80px;
+    .page-template-blocks .statement .has-large-font-size,
+    p.has-large-font-size.title {
+        font-size: 80px !important;
     }
 
     .site-container .wp-block-pullquote blockquote {
