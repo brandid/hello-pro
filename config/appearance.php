@@ -72,6 +72,11 @@ $appearance = array(
 			'size' => 36,
 			'slug' => 'large',
 		),
+		array(
+			'name' => __( 'Huge', 'hello-pro' ),
+			'size' => 42,
+			'slug' => 'huge',
+		),
 	),
 );
 
