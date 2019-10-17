@@ -21,12 +21,22 @@ function hellopro_css_output() {
 
 	$css = '';
 
-	$css .= '
-		/* ---- OUTPUT.PHP ---- */
+	$css .= '/* ----------------- // ADD CUSTOM STYLES INLINE // ----------------- */
 	';
 
+	$css .= '	/* CUSTOM FONT SIZES */
+		';
 	$css .= hello_pro_inline_font_sizes();
+
+	$css .= '
+	';
+
+	$css .= '	/* APPLY CUSTOMIZER COLORS TO BLOCKS */
+		';
 	$css .= hello_pro_inline_color_palette();
+
+	$css .= '
+	';
 
 	if ( $css ) {
 		wp_add_inline_style( CHILD_THEME_HANDLE, $css );
@@ -52,11 +62,10 @@ function hello_pro_inline_font_sizes() {
 
 	foreach ( $editor_font_sizes as $font_size ) {
 		$css .= sprintf(
-			'
-		.site-container .has-%s-font-size {
-			font-size: %spx;
+			'.site-container .has-%1$s-font-size {
+			font-size: %2$spx;
 		}
-			',
+		',
 			$font_size['slug'],
 			$font_size['size']
 		);
@@ -82,44 +91,34 @@ function hello_pro_inline_color_palette() {
 	foreach ( $editor_color_palette as $color_info ) {
 
 		$css .= sprintf(
-		'
-		.site-container .has-%s-color,
-		.site-container .wp-block-button .wp-block-button__link.has-%s-color,
-		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-%s-color {
-			color: %s;
+			'.site-container .has-%1$s-color,
+		.site-container .wp-block-button .wp-block-button__link.has-%1$s-color,
+		.site-container .wp-block-button.is-style-outline .wp-block-button__link.has-%1$s-color {
+			color: %2$s;
 		}
-		',
-		$color_info['slug'],
-		$color_info['slug'],
-		$color_info['slug'],
-		$color_info['color']
-		);
 
-		$css .= sprintf(
-		'
-		.site-container .has-%s-background-color,
-		.site-container .wp-block-button .wp-block-button__link.has-%s-background-color,
-		.site-container .wp-block-pullquote.is-style-solid-color.has-%s-background-color {
-			background-color: %s;
+		.site-container .has-%1$s-background-color,
+		.site-container .wp-block-button .wp-block-button__link.has-%1$s-background-color,
+		.site-container .wp-block-pullquote.is-style-solid-color.has-%1$s-background-color {
+			background-color: %2$s;
 		}
+
 		',
-		$color_info['slug'],
-		$color_info['slug'],
-		$color_info['slug'],
-		$color_info['color']
+			$color_info['slug'],
+			$color_info['color']
 		);
 
 	}
 
-	/* Get Primary Color */
+	// Get Primary Color.
 	$color_primary = get_theme_mod( 'hello_pro_link_color', $appearance['default-colors']['primary'] );
 
-	/* Get Secondary Color */
+	// Get Secondary Color.
 	$color_secondary = get_theme_mod( 'hello_pro_accent_color', $appearance['default-colors']['secondary'] );
 
-	/* PRIMARY COLOR
-	------------------------------------------ */
-	$css .= sprintf( '
+	// Define Primary Color elements.
+	$css .= sprintf(
+		'/* PRIMARY COLOR */
 		a,
 		.home-features > .wrap > .widget .textwidget > h3 > span,
 		.social-proof-slider-wrap .testimonial-item .testimonial-text .author .author-name,
@@ -146,7 +145,7 @@ function hello_pro_inline_color_palette() {
 		.entry-content .featured-articles button.slick-arrow > span,
 		.entry-content .featured-articles ul.slick-dots li button::before,
 		.entry-content .featured-articles ul.slick-dots li.slick-active button:before {
-			color: %s;
+			color: %1$s;
 		}
 
 		.menu-toggle,
@@ -160,47 +159,39 @@ function hello_pro_inline_color_palette() {
 		.sidebar-primary .widget input[type="submit"],
 		.sidebar-primary .widget .button,
 		.wpforms-form button[type=submit]  {
-			background-color: %s;
-			color: %s !important;
+			background-color: %1$s;
+			color: %2$s !important;
 		}
 
-		/* GUTENBERG */
 		.entry-content .featured-articles .featured-article {
-			background-color: %s !important;
+			background-color: %1$s !important;
 		}
 
 		.wp-block-button .wp-block-button__link.has-primary-background-color,
 		.ab-block-button > .ab-button  {
-			background-color: %s !important;
-			color: %s !important;
+			background-color: %1$s !important;
+			color: %2$s !important;
 		}
 
 		.wp-block-button .wp-block-button__link:not(.has-background) {
-		    background-color: %s !important;
+		    background-color: %1$s !important;
 		}
 
 		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):not(.has-text-color),
 		.wp-block-button.is-style-outline .wp-block-button__link.has-primary-background-color {
 			background-color: transparent !important;
-		    border-color: %s !important;
-			color: %s !important;
+		    border-color: %1$s !important;
+			color: %1$s !important;
 		}
-	',
-	$color_primary,
-	$color_primary,
-	hello_pro_color_contrast( $color_primary ),
-	$color_primary,
-	$color_primary,
-	hello_pro_color_contrast( $color_primary ),
-	$color_primary,
-	$color_primary,
-	$color_primary
+
+		',
+		$color_primary,
+		hello_pro_color_contrast( $color_primary )
 	);
 
-	/* SECONDARY COLOR
-	------------------------------------------ */
-	// $css .= ( hello_pro_customizer_get_default_accent_color() !== $color_secondary ) ? sprintf( '
-	$css .= sprintf( '
+	// Define Secondary Color elements.
+	$css .= sprintf(
+		'/* SECONDARY COLOR */
 		.menu-toggle:focus,
 		.menu-toggle:hover,
 		.archive-pagination li a:hover,
@@ -225,40 +216,31 @@ function hello_pro_inline_color_palette() {
 		.sidebar .enews-widget input[type="submit"]:hover,
 		.wpforms-form button[type=submit]:focus,
 		.wpforms-form button[type=submit]:hover {
-			background-color: %s !important;
-			color: %s !important;
+			background-color: %1$s !important;
+			color: %2$s !important;
 		}
 
-		/* GUTENBERG */
 		.wp-block-button .wp-block-button__link:not(.has-background):hover {
-		    background-color: %s !important;
-			color: %s !important;
+		    background-color: %1$s !important;
+			color: %2$s !important;
 		}
 
 		.wp-block-button.is-style-outline .wp-block-button__link.has-secondary-background-color {
 			background-color: transparent !important;
-		    border-color: %s !important;
-			color: %s !important;
+		    border-color: %1$s !important;
+			color: %1$s !important;
 		}
 
 		.wp-block-button.is-style-outline .wp-block-button__link:focus,
 		.wp-block-button.is-style-outline .wp-block-button__link:hover,
 		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):focus,
 		.wp-block-button.is-style-outline .wp-block-button__link:not(.has-background):hover {
-			background-color: %s !important;
-			border-color: %s !important;
-			color: %s !important;
-		}
-	',
-	$color_secondary,
-	hello_pro_color_contrast( $color_secondary ),
-	$color_secondary,
-	hello_pro_color_contrast( $color_secondary ),
-	$color_secondary,
-	$color_secondary,
-	$color_secondary,
-	$color_secondary,
-	hello_pro_color_contrast( $color_secondary )
+			background-color: %1$s !important;
+			border-color: %1$s !important;
+			color: %2$s !important;
+		}',
+		$color_secondary,
+		hello_pro_color_contrast( $color_secondary )
 	);
 
 	return $css;
