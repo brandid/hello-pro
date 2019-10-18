@@ -153,7 +153,7 @@ function hellopro_register_customizer() {
 	$wp_customize->add_setting(
 		'hello_pro_accent_color',
 		array(
-			'default'           => $appearance['default-colors']['primary'],
+			'default'           => $appearance['default-colors']['secondary'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
