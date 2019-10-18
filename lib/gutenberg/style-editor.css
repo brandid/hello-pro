@@ -317,6 +317,7 @@ p.has-text-color a:hover {
 
 /* Color Palette
 --------------------------------------------- */
+/*
 .has-primary-color {
     color: #ce461c;
 }
@@ -332,6 +333,7 @@ p.has-text-color a:hover {
 .has-secondary-background-color {
     background-color: #53796e;
 }
+*/
 
 .has-canary-color,
 .has-canary-color p {
@@ -355,17 +357,6 @@ p.has-text-color a:hover {
 
 .wp-block-button:not(.is-style-outline) .has-white-background-color {
     background-color: #fff !important;
-}
-
-/* Cover Image
---------------------------------------------- */
-
-.wp-block-cover.alignfull {
-    width: 100vw;
-}
-
-.wp-block-cover .wp-block-cover-text {
-    font-size: 36px;
 }
 
 /* Figcaption
