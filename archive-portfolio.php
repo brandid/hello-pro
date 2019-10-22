@@ -24,6 +24,13 @@ remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 
 // * Add portfolio body class to the head
 add_filter( 'body_class', 'hello_pro_add_portfolio_body_class' );
+/**
+ * Adds CSS class to body tag.
+ *
+ * @param array $classes Original body classes.
+ *
+ * @return array Modified body classes.
+ */
 function hello_pro_add_portfolio_body_class( $classes ) {
 
 	$classes[] = 'hello-pro-portfolio';
@@ -31,12 +38,20 @@ function hello_pro_add_portfolio_body_class( $classes ) {
 
 }
 
-// * Add the featured image after post title
+// Add the featured image after the post title.
 add_action( 'genesis_entry_header', 'hello_pro_portfolio_grid' );
+/**
+ * Adds the featured image after the post title.
+ */
 function hello_pro_portfolio_grid() {
 
-	if ( $image = genesis_get_image( 'format=url&size=portfolio' ) ) {
-		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark"><img src="%s" alt="%s" /></a></div>', get_permalink(), $image, the_title_attribute( 'echo=0' ) );
+	if ( genesis_get_image( 'format=url&size=portfolio' ) === $image ) {
+		printf(
+			'<div class="portfolio-featured-image"><a href="%s" rel="bookmark"><img src="%s" alt="%s" /></a></div>',
+			esc_url( get_permalink() ),
+			esc_url( $image ),
+			the_title_attribute( 'echo=0' )
+		);
 	}
 
 }

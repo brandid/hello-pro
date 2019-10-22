@@ -48,7 +48,7 @@ function hello_pro_output_category_list() {
 function hello_pro_show_featured_articles() {
 
 	$args = array(
-		'meta_query' => array(
+		'meta_query'          => array( // phpcs:ignore
 			array(
 				'key'     => '_hellopro_featured_article',
 				'value'   => '1',

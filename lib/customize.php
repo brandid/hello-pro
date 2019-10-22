@@ -7,40 +7,42 @@
  * @package Hello Pro Theme
  */
 
+add_action( 'customize_register', 'hellopro_register_customizer' );
 /**
  * Register settings and controls with the Customizer.
  *
  * @since 3.0.1
  */
-add_action( 'customize_register', 'hellopro_register_customizer' );
 function hellopro_register_customizer() {
 
 	global $wp_customize;
 
 	$appearance = genesis_get_config( 'appearance' );
 
-	/* SITE TITLE DISPLAY
-	--------------------------------------------------------------------- */
-	$wp_customize->add_setting('site_title_display', array(
-			'default'			=> 'display_text',
-			'type'				=> 'theme_mod',
-			'transport'			=> 'refresh',
+	// Add 'Site Title Display' setting.
+	$wp_customize->add_setting(
+		'site_title_display',
+		array(
+			'default'           => 'display_text',
+			'type'              => 'theme_mod',
+			'transport'         => 'refresh',
 			'sanitize_callback' => 'hellopro_sanitize_select',
-	));
+		)
+	);
 
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
 			'site_title_display',
 			array(
-                'label' => esc_html__( 'Site Title Display', 'hello-pro' ),
-                'section' => 'title_tagline',
-                'type' => 'select',
-                'choices' => array(
-                    'display_text' => esc_html__('Show Title & Tagline','hello-pro'),
-                    'display_logo' => esc_html__('Show Logo Image','hello-pro')
-                )
-            )
+				'label'   => esc_html__( 'Site Title Display', 'hello-pro' ),
+				'section' => 'title_tagline',
+				'type'    => 'select',
+				'choices' => array(
+					'display_text' => esc_html__( 'Show Title & Tagline', 'hello-pro' ),
+					'display_logo' => esc_html__( 'Show Logo Image', 'hello-pro' ),
+				),
+			)
 		)
 	);
 
@@ -125,8 +127,7 @@ function hellopro_register_customizer() {
 		)
 	);
 
-	/* PRIMARY COLOR OPTION
-	--------------------------------------------------------------------- */
+	// Add 'Primary Color' setting.
 	$wp_customize->add_setting(
 		'hello_pro_link_color',
 		array(
@@ -148,8 +149,7 @@ function hellopro_register_customizer() {
 		)
 	);
 
-	/* SECONDARY COLOR OPTION
-	--------------------------------------------------------------------- */
+	// Add 'Secondary Color' setting.
 	$wp_customize->add_setting(
 		'hello_pro_accent_color',
 		array(
@@ -197,15 +197,15 @@ function hellopro_sanitize_checkbox( $checked ) {
  * @param string $setting The select element.
  * @return string The sanitized input, or the default value if not clean.
  */
-function hellopro_sanitize_select( $input, $setting ){
+function hellopro_sanitize_select( $input, $setting ) {
 
-	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+	// Input - must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only.
 	$input = sanitize_key( $input );
 
-	//get the list of possible select options
+	// Get the list of possible select options.
 	$choices = $setting->manager->get_control( $setting->id )->choices;
 
-	//return input if valid or return default option
+	// Return input if valid or return default option.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 }

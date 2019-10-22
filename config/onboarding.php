@@ -9,17 +9,18 @@
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
+
 return array(
-	'dependencies' => array(
+	'dependencies'     => array(
 		'plugins' => array(
 			array(
-				'name' 		 => __( 'Atomic Blocks', 'hello-pro' ),
-				'slug' 		 => 'atomic-blocks/atomicblocks.php',
+				'name'       => __( 'Atomic Blocks', 'hello-pro' ),
+				'slug'       => 'atomic-blocks/atomicblocks.php',
 				'public_url' => 'https://atomicblocks.com/',
 			),
 			array(
-				'name' 		 => __( 'Social Proof Slider', 'hello-pro' ),
-				'slug' 		 => 'social-proof-testimonials-slider/social-proof-slider.php',
+				'name'       => __( 'Social Proof Slider', 'hello-pro' ),
+				'slug'       => 'social-proof-testimonials-slider/social-proof-slider.php',
 				'public_url' => 'https://wordpress.org/plugins/social-proof-testimonials-slider/',
 			),
 			array(
@@ -29,7 +30,7 @@ return array(
 			),
 		),
 	),
-	'content' => array(
+	'content'          => array(
 		'homepage' => array(
 			'post_title'     => 'Homepage',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/homepage.php',
@@ -80,8 +81,8 @@ return array(
 		),
 	),
 	'navigation_menus' => array(
-		// Header Navigation
-		'primary' => array(
+		// Header Navigation.
+		'primary'   => array(
 			'homepage' => array(
 				'title' => 'Home',
 			),
@@ -98,7 +99,7 @@ return array(
 				'title' => 'Contact Me',
 			),
 		),
-		// Footer Navigation
+		// Footer Navigation.
 		'secondary' => array(
 			'homepage' => array(
 				'title' => 'Home',

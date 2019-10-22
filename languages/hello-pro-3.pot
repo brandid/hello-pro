@@ -13,64 +13,112 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: page_landing.php:10, page-templates/landing.php:7
-msgid "Landing"
+#: config/appearance.php:24
+msgid "Primary Color"
 msgstr ""
 
-#: config/menus.php:13
-msgid "Header Menu"
+#: config/appearance.php:29, lib/customize.php:167
+msgid "Secondary Color"
 msgstr ""
 
-#: config/menus.php:14
-msgid "Footer Menu"
+#: config/appearance.php:34
+msgid "Background Canary"
 msgstr ""
 
-#: config/onboarding.php:16
+#: config/appearance.php:39
+msgid "White"
+msgstr ""
+
+#: config/appearance.php:44
+msgid "Dark Gray"
+msgstr ""
+
+#: config/appearance.php:49
+msgid "Black"
+msgstr ""
+
+#: config/appearance.php:56
+msgid "Small"
+msgstr ""
+
+#: config/appearance.php:61
+msgid "Normal"
+msgstr ""
+
+#: config/appearance.php:66
+msgid "Medium"
+msgstr ""
+
+#: config/appearance.php:71
+msgid "Large"
+msgstr ""
+
+#: config/appearance.php:76
+msgid "Huge"
+msgstr ""
+
+#: config/onboarding.php:17
 msgid "Atomic Blocks"
 msgstr ""
 
-#: config/onboarding.php:21
+#: config/onboarding.php:22
 msgid "Social Proof Slider"
 msgstr ""
 
-#: config/onboarding.php:26
+#: config/onboarding.php:27
 msgid "Simple Social Icons"
 msgstr ""
 
-#: lib/customize.php:36
+#: lib/customize.php:38
 msgid "Site Title Display"
 msgstr ""
 
-#: lib/customize.php:40
+#: lib/customize.php:42
 msgid "Show Title & Tagline"
 msgstr ""
 
-#: lib/customize.php:41
+#: lib/customize.php:43
 msgid "Show Logo Image"
 msgstr ""
 
-#: lib/customize.php:50
+#: lib/customize.php:53
+msgid "Hello! Pro Settings"
+msgstr ""
+
+#: lib/customize.php:74
 msgid "Sticky Header"
 msgstr ""
 
-#: lib/customize.php:65
-msgid "Turn OFF the Sticky Header Navigation — (no \"sticky\" behavior)"
+#: lib/customize.php:77
+msgid "Enable or Disable the Sticky Header. Turning this ON will keep the header in place while you scroll the page. Turning this OFF will make the header scroll with the rest of the page content. This effect is disabled for mobile devices."
 msgstr ""
 
-#: lib/customize.php:88
+#: lib/customize.php:98
+msgid "Blog \"Featured Articles\" Slider"
+msgstr ""
+
+#: lib/customize.php:101
+msgid "Enable or Disable the Featured Articles Carousel Slider on the Blog Archive pages."
+msgstr ""
+
+#: lib/customize.php:122
+msgid "Blog Categories List"
+msgstr ""
+
+#: lib/customize.php:125
+msgid "Enable or Disable the list of Blog Categories on Archive pages."
+msgstr ""
+
+#: lib/customize.php:144
 msgid "Change the main accent color used in various elements in the theme."
 msgstr ""
 
-#: lib/customize.php:89
+#: lib/customize.php:145
 msgid "Primary/Accent Color"
 msgstr ""
 
-#: lib/customize.php:111
+#: lib/customize.php:166
 msgid "Change the hover color for buttons."
-msgstr ""
-
-#: lib/customize.php:112
-msgid "Secondary Color"
 msgstr ""
 
 #: lib/load-scripts.php:21
@@ -81,62 +129,70 @@ msgstr ""
 msgid "Submenu"
 msgstr ""
 
-#: lib/widget-setup.php:16
-msgid "Home - Welcome"
+#: lib/metaboxes.php:20, lib/metaboxes.php:48
+msgid "Featured Article"
 msgstr ""
 
 #: lib/widget-setup.php:17
+msgid "Home - Welcome"
+msgstr ""
+
+#: lib/widget-setup.php:18
 msgid "Introduce yourself! Welcome visitors to your homepage by using a text widget in this space with up to 200 characters of establishing copy."
 msgstr ""
 
-#: lib/widget-setup.php:21
+#: lib/widget-setup.php:25
 msgid "Home - Intro"
 msgstr ""
 
-#: lib/widget-setup.php:22
+#: lib/widget-setup.php:26
 msgid "Setup your message. Add a few brief teaser sentences here, to keep users scrolling further down the Homepage."
 msgstr ""
 
-#: lib/widget-setup.php:26
+#: lib/widget-setup.php:33
 msgid "Home - Call To Action"
 msgstr ""
 
-#: lib/widget-setup.php:27
+#: lib/widget-setup.php:34
 msgid "Engage your audience. Add your primary call to action text and opt-in form here. Think about what you value you can offer in exchange for their valuable email address."
 msgstr ""
 
-#: lib/widget-setup.php:31
+#: lib/widget-setup.php:41
 msgid "Home - Features"
 msgstr ""
 
-#: lib/widget-setup.php:32
+#: lib/widget-setup.php:42
 msgid "This three-column widget area can display text, recent posts, or page excerpts. We recommend highlighting three services, products, or features of your business, practice, or organization."
 msgstr ""
 
-#: lib/widget-setup.php:36
+#: lib/widget-setup.php:49
 msgid "Home - Statement"
 msgstr ""
 
-#: lib/widget-setup.php:37
+#: lib/widget-setup.php:50
 msgid "Make a bold statement! Put up to 70 characters of text here."
 msgstr ""
 
-#: lib/widget-setup.php:41
+#: lib/widget-setup.php:57
 msgid "Home - Portfolio"
 msgstr ""
 
-#: lib/widget-setup.php:42
+#: lib/widget-setup.php:58
 msgid "Show off your work. Use featured images to pull 3, 6, or 9 portfolio items into this homepage feature area. Also works with posts or pages."
 msgstr ""
 
-#: lib/widget-setup.php:46
+#: lib/widget-setup.php:65
 msgid "Home - Testimonial"
 msgstr ""
 
-#: lib/widget-setup.php:47
+#: lib/widget-setup.php:66
 msgid "Let others do the talking. Feature a client quote or testimonial (or other content) in this space at the bottom of your homepage."
 msgstr ""
 
 #: page-templates/blocks.php:7
 msgid "Blocks"
+msgstr ""
+
+#: page-templates/landing.php:7
+msgid "Landing"
 msgstr ""

@@ -11,16 +11,16 @@
  */
 
 // Define the default image URLs.
-$hello_pro_homepage_welcome_image_url = CHILD_URL . '/config/import/images/home-welcome-default.jpg';
-$hello_pro_homepage_optin_image_url = CHILD_URL . '/config/import/images/home-optin-default.jpg';
-$hello_pro_homepage_statement_image_url = CHILD_URL . '/config/import/images/home-statement-default.jpg';
+$hello_pro_homepage_welcome_image_url      = CHILD_URL . '/config/import/images/home-welcome-default.jpg';
+$hello_pro_homepage_optin_image_url        = CHILD_URL . '/config/import/images/home-optin-default.jpg';
+$hello_pro_homepage_statement_image_url    = CHILD_URL . '/config/import/images/home-statement-default.jpg';
 $hello_pro_homepage_testimonials_image_url = CHILD_URL . '/config/import/images/home-testimonials-default.jpg';
 
-$hello_pro_homepage_sample_logo_a_image_url = CHILD_URL . '/config/import/images/sample-logo-A.png';
-$hello_pro_homepage_sample_logo_bluebird_image_url = CHILD_URL . '/config/import/images/sample-logo-bluebird.png';
-$hello_pro_homepage_sample_logo_bluefish_image_url = CHILD_URL . '/config/import/images/sample-logo-bluefish.png';
-$hello_pro_homepage_sample_logo_inkubator_image_url = CHILD_URL . '/config/import/images/sample-logo-inkubator.png';
-$hello_pro_homepage_sample_logo_lotsatravel_image_url = CHILD_URL . '/config/import/images/sample-logo-lotsatravel.png';
+$hello_pro_homepage_sample_logo_a_image_url              = CHILD_URL . '/config/import/images/sample-logo-A.png';
+$hello_pro_homepage_sample_logo_bluebird_image_url       = CHILD_URL . '/config/import/images/sample-logo-bluebird.png';
+$hello_pro_homepage_sample_logo_bluefish_image_url       = CHILD_URL . '/config/import/images/sample-logo-bluefish.png';
+$hello_pro_homepage_sample_logo_inkubator_image_url      = CHILD_URL . '/config/import/images/sample-logo-inkubator.png';
+$hello_pro_homepage_sample_logo_lotsatravel_image_url    = CHILD_URL . '/config/import/images/sample-logo-lotsatravel.png';
 $hello_pro_homepage_sample_logo_mitalsolutions_image_url = CHILD_URL . '/config/import/images/sample-logo-mitalsolutions.png';
 
 // Begin creating the content output.

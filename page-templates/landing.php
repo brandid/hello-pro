@@ -11,6 +11,7 @@
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
+
 add_filter( 'body_class', 'bid_hello_pro_landing_body_class' );
 /**
  * Adds landing page body class.
@@ -18,12 +19,14 @@ add_filter( 'body_class', 'bid_hello_pro_landing_body_class' );
  * @since 3.0.1
  *
  * @param array $classes Original body classes.
+ *
  * @return array Modified body classes.
  */
 function bid_hello_pro_landing_body_class( $classes ) {
 	$classes[] = 'landing-page';
 	return $classes;
 }
+
 // Removes Skip Links.
 remove_action( 'genesis_before_header', 'genesis_skip_links', 5 );
 add_action( 'wp_enqueue_scripts', 'bid_hello_pro_dequeue_skip_links' );

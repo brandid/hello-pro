@@ -7,42 +7,49 @@
  * @package Hello Pro Theme
  */
 
-//* Gutenberg Front-end styles
+// Enqueue the Gutenberg Front-end styles.
 add_action( 'wp_enqueue_scripts', 'hellopro_gutenberg_page_styles' );
+/**
+ * Enqueues the front-end styles.
+ */
 function hellopro_gutenberg_page_styles() {
 
-	//* Gutenberg block styles
 	wp_enqueue_style(
 		'hellopro-gutenberg-frontend-styles',
-		get_stylesheet_directory_uri() . "/lib/gutenberg/front-end.css",
+		get_stylesheet_directory_uri() . '/lib/gutenberg/front-end.css',
 		array( CHILD_THEME_HANDLE ),
 		genesis_get_theme_version()
 	);
 
 }
 
-//* Gutenberg Editor styles
+// Enqueue the Gutenberg Editor back-end styles.
 add_action( 'enqueue_block_editor_assets', 'hellopro_gutenberg_editor_styles' );
+/**
+ * Enqueues the back-end styles.
+ */
 function hellopro_gutenberg_editor_styles() {
 
 	// Get Appearance Settings.
 	$appearance = genesis_get_config( 'appearance' );
 
-	// Fonts
+	// Add custom Fonts.
 	wp_enqueue_style( 'font-awesome', $appearance['fontawesome-css-url'], array(), genesis_get_theme_version() );
 	wp_enqueue_style( 'google-font', $appearance['fonts-url'], array(), genesis_get_theme_version() );
 
-	// Custom Editor Styles
+	// Add custom Editor Styles.
 	wp_enqueue_style(
 		'hellopro-gutenberg-editor-styles',
-		get_stylesheet_directory_uri() . ('/lib/gutenberg/style-editor.css'),
+		get_stylesheet_directory_uri() . ( '/lib/gutenberg/style-editor.css' ),
 		array(),
 		genesis_get_theme_version(),
 		true
 	);
 
-	// Add custom colors to Gutenberg
-	require_once('output-gutenberg-editor.php');
+	// Add the Customizer colors.
+	require_once 'output-gutenberg-editor.php';
+
+	// Add inline styles from the above file.
 	wp_add_inline_style( 'hellopro-gutenberg-editor-styles', hellopro_gutenberg_editor_customizer_css_output(), 'after' );
 
 }
@@ -73,7 +80,7 @@ function hello_pro_blocks_body_classes( $classes ) {
 
 	$post_object = get_post( get_the_ID() );
 
-	$blocks      = (array) parse_blocks( $post_object->post_content );
+	$blocks = (array) parse_blocks( $post_object->post_content );
 
 	if ( isset( $blocks[0]['blockName'] ) ) {
 		$classes[] = 'first-block-' . str_replace( '/', '-', $blocks[0]['blockName'] );
@@ -86,23 +93,23 @@ function hello_pro_blocks_body_classes( $classes ) {
 	return $classes;
 }
 
-//* Add support for editor styles
+// Add support for editor styles.
 add_theme_support( 'editor-styles' );
 
-//* Enqueue Editor styles
+// Enqueue Editor styles.
 add_editor_style( '/lib/gutenberg/style-editor.css' );
 
-//* Enable Wide Images
+// Enable Wide Images.
 add_theme_support( 'align-wide' );
 
-//* Make media embeds responsive
+// Make media embeds responsive.
 add_theme_support( 'responsive-embeds' );
 
 // Get the Block Editor Settings.
 $appearance = genesis_get_config( 'appearance' );
 
-// Editor Color Palette
+// Add support for custom Color Palette in the Block Editor.
 add_theme_support( 'editor-color-palette', $appearance['editor-color-palette'] );
 
-// Editor Font Sizes
+// Add support for custom Font Sizes in the Block Editor.
 add_theme_support( 'editor-font-sizes', $appearance['editor-font-sizes'] );

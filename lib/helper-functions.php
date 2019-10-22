@@ -15,7 +15,9 @@
  *
  * @since 3.0.1
  *
- * @return string Hex color code for contrast color
+ * @param string $color The original color to compare against.
+ *
+ * @return string Hex color code for contrast color.
  */
 function hello_pro_color_contrast( $color ) {
 
@@ -35,7 +37,10 @@ function hello_pro_color_contrast( $color ) {
  *
  * @since 3.0.1
  *
- * @return string Hex color code for the color brightness
+ * @param string $color The original color to compare against.
+ * @param string $change Amount to change the original color's brightness.
+ *
+ * @return string Hex color code for the color brightness.
  */
 function hello_pro_color_brightness( $color, $change ) {
 
@@ -49,6 +54,6 @@ function hello_pro_color_brightness( $color, $change ) {
 	$green = max( 0, min( 255, $green + $change ) );
 	$blue  = max( 0, min( 255, $blue + $change ) );
 
-	return '#'.dechex( $red ).dechex( $green ).dechex( $blue );
+	return '#' . dechex( $red ) . dechex( $green ) . dechex( $blue );
 
 }

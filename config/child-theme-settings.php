@@ -9,6 +9,7 @@
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
+
 return array(
 	GENESIS_SETTINGS_FIELD => array(
 		'blog_cat_num'              => 5,
