@@ -21,7 +21,7 @@ $hello_pro_landingpage_optin_image_url = CHILD_URL . '/config/import/images/land
 // Photo by Aaron Mello on Unsplash.
 $hello_pro_landingpage_testimonials_image_url = CHILD_URL . '/config/import/images/landingpage-testimonials-default.jpg';
 
-//* Begin Creating Content Output
+// Begin Creating Content Output.
 return <<<CONTENT
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#fff","containerImgID":14,"containerDimRatio":70,"className":"welcome"} -->
 <div style="background-color:#fff;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container welcome ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_welcome_image_url" alt=""/></div><div class="ab-container-content" style="max-width:1200px"><!-- wp:paragraph {"align":"left","fontSize":"huge"} -->
@@ -39,32 +39,32 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now<br></a></div>
+<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
 <!-- /wp:button --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingBottom":5,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#f5f2eb"} -->
-<div style="background-color:#f5f2eb;padding-bottom:5%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:columns {"className":"no-bottom-margin"} -->
-<div class="wp-block-columns has-2-columns no-bottom-margin"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<div style="background-color:#f5f2eb;padding-bottom:5%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-equal"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:heading {"level":3} -->
 <h3>Course Description</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left"} -->
 <p style="text-align:left">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<!-- wp:atomic-blocks/ab-column -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:heading {"level":3} -->
 <h3>Course Requirements</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left"} -->
 <p style="text-align:left">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div></div>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":12,"containerPaddingBottom":10,"containerPaddingLeft":12,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1000,"containerBackgroundColor":"#313131","containerImgID":27,"containerDimRatio":70,"className":"opt-in"} -->
@@ -82,9 +82,9 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1060,"containerBackgroundColor":"#fffcf5"} -->
-<div style="background-color:#fffcf5;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1060px"><!-- wp:columns {"columns":3} -->
-<div class="wp-block-columns has-3-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
+<div style="background-color:#fffcf5;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1060px"><!-- wp:atomic-blocks/ab-columns {"columns":3,"layout":"ab-3-col-equal"} -->
+<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-3 ab-3-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
 <p class="has-text-color has-small-font-size has-primary-color text-subhead">Course #1:</p>
 <!-- /wp:paragraph -->
 
@@ -97,12 +97,12 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now<br></a></div>
-<!-- /wp:button --></div>
-<!-- /wp:column -->
+<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
+<!-- wp:atomic-blocks/ab-column -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
 <p class="has-text-color has-small-font-size has-primary-color text-subhead">Course #2:</p>
 <!-- /wp:paragraph -->
 
@@ -115,12 +115,12 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now<br></a></div>
-<!-- /wp:button --></div>
-<!-- /wp:column -->
+<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div></div>
+<!-- /wp:atomic-blocks/ab-column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
+<!-- wp:atomic-blocks/ab-column -->
+<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
 <p class="has-text-color has-small-font-size has-primary-color text-subhead">Course #3:</p>
 <!-- /wp:paragraph -->
 
@@ -133,19 +133,15 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now<br></a></div>
-<!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div></div>
+<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div></div>
+<!-- /wp:atomic-blocks/ab-column --></div></div>
+<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":1,"containerPaddingRight":0,"containerPaddingBottom":50,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":660,"containerBackgroundColor":"#fff","containerImgID":55,"containerDimRatio":70,"className":"testimonial"} -->
 <div style="background-color:#fff;padding-bottom:50%;padding-top:1%" class="wp-block-atomic-blocks-ab-container testimonial ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_testimonials_image_url" alt=""/></div><div class="ab-container-content" style="max-width:660px"><!-- wp:shortcode -->
 [social-proof-slider]
-<!-- /wp:shortcode -->
-
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph --></div></div></div>
+<!-- /wp:shortcode --></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 CONTENT;
