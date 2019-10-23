@@ -15,7 +15,7 @@
 // Photo by Court Prather on Unsplash.
 $hello_pro_about_headshot_image_url = CHILD_URL . '/config/import/images/about-headshot-default.jpg';
 
-$hello_pro_contact_page_url = get_bloginfo( 'url' ) . '/contact-me/';
+$hello_pro_contact_page_url = home_url() . '/contact-me/';
 
 return <<<CONTENT
 <!-- wp:atomic-blocks/ab-spacer {"spacerHeight":70} -->
