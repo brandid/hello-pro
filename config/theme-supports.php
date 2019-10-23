@@ -32,8 +32,8 @@ return array(
 	'genesis-after-entry-widget-area' => '',
 	'genesis-footer-widgets'          => 3,
 	'genesis-menus'                   => array(
-		'primary'         => __( 'Header Right Menu', 'coursemaker' ),
-		'primary-members' => __( 'Header Right Menu - Members', 'coursemaker' ),
-		'secondary'       => __( 'Footer Menu', 'coursemaker' ),
+		'primary'         => __( 'Header Right Menu', 'hello-pro' ),
+		'primary-members' => __( 'Header Right Menu - Members', 'hello-pro' ),
+		'secondary'       => __( 'Footer Menu', 'hello-pro' ),
 	),
 );

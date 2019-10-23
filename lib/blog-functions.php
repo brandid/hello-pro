@@ -98,7 +98,7 @@ function hello_pro_show_featured_articles() {
 			echo '<div class="text-container">';
 
 			// Show the 'Featured Article' header text.
-			echo '<div class="featured-article-item-header">' . esc_html__( 'Featured Article', 'hellopro' ) . '</div>';
+			echo '<div class="featured-article-item-header">' . esc_html__( 'Featured Article', 'hello-pro' ) . '</div>';
 
 			// Show the Post Title.
 			echo '<h2 class="entry-title"><a href="' . esc_url( get_the_permalink() ) . '" class="entry-title-link">' . esc_html( $post_title ) . '</a></h2>';
