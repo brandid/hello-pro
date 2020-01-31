@@ -1,8 +1,6 @@
 <?php
 /**
- * Hello! Pro
- *
- * Contact page content optionally installed after theme activation.
+ * Hello! Pro - Demo CONTACT page One-Click Theme Setup content
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *

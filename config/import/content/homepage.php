@@ -1,6 +1,6 @@
 <?php
 /**
- * Hello! Pro - Homepage Demo content
+ * Hello! Pro - Demo HOME page One-Click Theme Setup content
  *
  * Homepage content optionally installed after theme activation.
  *

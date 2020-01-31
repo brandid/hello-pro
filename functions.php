@@ -34,8 +34,11 @@ function hello_pro_localization_setup() {
 	load_child_theme_textdomain( 'hello-pro', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'hello-pro' ) );
 }
 
-// Add helper functions.
-require_once get_stylesheet_directory() . '/lib/helper-functions.php';
+// Add Theme setup functions.
+require_once get_stylesheet_directory() . '/lib/theme-setup.php';
+
+// Add the onboarding functions.
+require_once get_stylesheet_directory() . '/lib/onboarding-functions.php';
 
 // Add the custom meta boxes.
 require_once get_stylesheet_directory() . '/lib/metaboxes.php';
@@ -58,11 +61,11 @@ function genesis_child_gutenberg_support() {
 	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
 }
 
-// Add scripts and styles.
-require_once get_stylesheet_directory() . '/lib/load-scripts.php';
-
-// Add Theme setup functions.
-require_once get_stylesheet_directory() . '/lib/theme-setup.php';
+// Add helper functions.
+require_once get_stylesheet_directory() . '/lib/helper-functions.php';
 
 // Add the blog functions.
 require_once get_stylesheet_directory() . '/lib/blog-functions.php';
+
+// Add scripts and styles.
+require_once get_stylesheet_directory() . '/lib/load-scripts.php';
