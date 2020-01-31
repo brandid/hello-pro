@@ -266,3 +266,32 @@ function hello_pro_blog_header_output() {
 
 }
 add_action( 'genesis_before_loop', 'hello_pro_blog_header_output', 20 );
+
+// Open a wrapper around the blog posts
+add_action( 'genesis_before_loop', 'hello_pro_blog_wrapper_open', 30 );
+function hello_pro_blog_wrapper_open() {
+
+	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout' );
+	$colSetting = get_theme_mod( 'blog_grid_cols' );
+
+	if ( ! empty( $blogGridLayout ) ) {
+		echo '<div class="blog-posts-wrap ' . $colSetting . '">';
+		echo '<div class="alignfull" style="padding: 0 8%;">';
+		echo '<div class="blog-posts-wrap-content">';
+	}
+
+}
+
+// Close the wrapper around the blog posts
+add_action( 'genesis_after_loop', 'hello_pro_blog_wrapper_close', 30 );
+function hello_pro_blog_wrapper_close() {
+
+	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout' );
+
+	if ( ! empty( $blogGridLayout ) ) {
+		echo '</div>';
+		echo '</div>';
+		echo '</div>';
+	}
+
+}

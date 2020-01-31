@@ -127,6 +127,56 @@ function hellopro_register_customizer() {
 		)
 	);
 
+	// Add Use Blog Grid Layout Setting.
+	$wp_customize->add_setting(
+		'enable_blog_grid_layout',
+		array(
+			'default'           => true,
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'hellopro_sanitize_checkbox',
+		)
+	);
+
+	// Add Default Lifter Styles Control.
+	$wp_customize->add_control(
+		new Hello_Pro_Toggle_Control(
+			$wp_customize,
+			'enable_blog_grid_layout',
+			array(
+				'label'       => __( 'Enable Blog Grid Layout', 'coursemaker' ),
+				'section'     => 'hellopro_settings',
+				'settings'    => 'enable_blog_grid_layout',
+				'description' => __( 'Show blog posts in a grid on the archive page.', 'coursemaker' ),
+			)
+		)
+	);
+
+	// Add Blog Grid Columns Setting.
+	$wp_customize->add_setting(
+		'blog_grid_cols',
+		array(
+			'default'           => 'col-2',
+			'type'              => 'theme_mod',
+			'sanitize_callback' => 'hellopro_sanitize_select',
+		)
+	);
+
+	// Add Default Lifter Styles Control.
+	$wp_customize->add_control(
+		'blog_grid_cols',
+		array(
+			'type'        => 'select',
+			'section'     => 'hellopro_settings',
+			'label'       => __( 'Blog Grid Columns', 'hellopro' ),
+			'description' => __( 'Choose how many columns to display in the blog grid.' ),
+			'choices'     => array(
+				'col-2' => __( '2 Columns', 'hellopro' ),
+				'col-3' => __( '3 Columns', 'hellopro' ),
+				'col-4' => __( '4 Columns', 'hellopro' ),
+			),
+		)
+	);
+
 	// Add 'Primary Color' setting.
 	$wp_customize->add_setting(
 		'hello_pro_link_color',
@@ -208,4 +258,22 @@ function hellopro_sanitize_select( $input, $setting ) {
 	// Return input if valid or return default option.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
+}
+
+// Enqueue JS which will show/hide a control based on another control's status.
+add_action( 'customize_controls_enqueue_scripts', 'hellopro_customizer_conditional_select' );
+/**
+ * Custom contextual controls
+ */
+function hellopro_customizer_conditional_select() {
+	wp_enqueue_script( 'hellopro-conditionalselect', get_stylesheet_directory_uri() . '/js/customizer.js?v=' . rand(), array( 'customize-controls' ), false );
+}
+
+// Enqueue JS for Customizer Live Preview pane.
+add_action( 'customize_preview_init', 'hellopro_customizer_live_preview' );
+/**
+ * Live preview script enqueue
+ */
+function hellopro_customizer_live_preview() {
+	wp_enqueue_script( 'hellopro-themecustomizer', get_stylesheet_directory_uri() . '/js/customizer-preview.js?v=' . rand(), array( 'jquery', 'customize-preview' ), false );
 }
