@@ -152,6 +152,34 @@ return array(
 				'_hellopro_featured_article' => 1,
 			),
 		),
+		/* SAMPLE TESTIMONIALS */
+		'Sample Testimonial 1' => array(
+			'post_title'     => 'Sample Testimonial 1',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-1.php',
+		),
+		'Sample Testimonial 2' => array(
+			'post_title'     => 'Sample Testimonial 2',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-2.php',
+		),
+		'Sample Testimonial 3' => array(
+			'post_title'     => 'Sample Testimonial 3',
+			'post_content'   => '',
+			'post_type'      => 'socialproofslider',
+			'post_status'    => 'publish',
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-3.php',
+		),
 	),
 	'navigation_menus' => array(
 		// Header Navigation.
