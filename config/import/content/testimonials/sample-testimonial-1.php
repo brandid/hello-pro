@@ -10,9 +10,9 @@
  * @link    https://www.studiopress.com/
  */
 
-$author_name      = __( "Author's Name", 'hellopro' );
-$author_title     = __( 'Business or Professional Title', 'hellopro' );
-$testimonial_text = __( "Rachel is an amazing teacher. Her personal branding course wasn't just useful, it was fun, too -- and it gave me the confidence I need to start my own business.", 'hellopro' );
+$author_name      = __( 'Vivian Ngai', 'hellopro' );
+$author_title     = __( 'oliviachubey.com', 'hellopro' );
+$testimonial_text = 'The Hello! Pro theme is awesome because it’s already designed for personality brands, yet allowed me to personalize and customize where needed.';
 
 return array(
 	'socialproofslider_testimonial_author_name'  => '<p>' . $author_name . '</p>',

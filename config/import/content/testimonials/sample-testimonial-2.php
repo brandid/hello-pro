@@ -10,9 +10,9 @@
  * @link    https://www.studiopress.com/
  */
 
-$author_name      = __( 'Testimonial Author', 'hellopro' );
-$author_title     = __( 'Business or Professional Title', 'hellopro' );
-$testimonial_text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elit est, malesuada id turpis vitae, fermentum egestas mauris. Phasellus convallis dolor a pretium varius. Aliquam lacinia elit quis egestas tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+$author_name      = __( 'Wendy Bedell', 'hellopro' );
+$author_title     = __( 'berrienchild.org', 'hellopro' );
+$testimonial_text = 'Hello! Pro is gorgeous right out the box! Love the styling. Great job team.';
 
 return array(
 	'socialproofslider_testimonial_author_name'  => '<p>' . $author_name . '</p>',

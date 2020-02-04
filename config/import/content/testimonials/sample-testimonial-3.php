@@ -10,9 +10,9 @@
  * @link    https://www.studiopress.com/
  */
 
-$author_name      = __( 'Quote Author', 'hellopro' );
+$author_name      = __( 'Satisfied Customer', 'hellopro' );
 $author_title     = __( 'Business or Professional Title', 'hellopro' );
-$testimonial_text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis bibendum ipsum, nec scelerisque metus. Suspendisse ultrices in risus et aliquam. Maecenas ut risus mauris. Sed luctus diam vitae faucibus venenatis.';
+$testimonial_text = __( "The brandiD is an amazing agency. Their personal branding course wasn't just useful, it was fun, too -- and it gave me the confidence I need to start my own business.", 'hellopro' );
 
 return array(
 	'socialproofslider_testimonial_author_name'  => '<p>' . $author_name . '</p>',
