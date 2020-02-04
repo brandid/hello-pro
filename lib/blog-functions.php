@@ -271,8 +271,12 @@ add_action( 'genesis_before_loop', 'hello_pro_blog_header_output', 20 );
 add_action( 'genesis_before_loop', 'hello_pro_blog_wrapper_open', 30 );
 function hello_pro_blog_wrapper_open() {
 
-	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout' );
-	$colSetting = get_theme_mod( 'blog_grid_cols' );
+	if ( ! is_home() ) {
+		return;
+	}
+
+	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout', true );
+	$colSetting = get_theme_mod( 'blog_grid_cols', 'col-3' );
 
 	if ( ! empty( $blogGridLayout ) ) {
 		echo '<div class="blog-posts-wrap ' . $colSetting . '">';
@@ -286,7 +290,7 @@ function hello_pro_blog_wrapper_open() {
 add_action( 'genesis_after_loop', 'hello_pro_blog_wrapper_close', 30 );
 function hello_pro_blog_wrapper_close() {
 
-	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout' );
+	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout', true );
 
 	if ( ! empty( $blogGridLayout ) ) {
 		echo '</div>';

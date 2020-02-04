@@ -48,6 +48,7 @@ function hellopro_stickynav_body_class( $classes ) {
 // Add custom image sizes.
 add_image_size( 'featured', 300, 100, true );
 add_image_size( 'portfolio', 300, 175, true );
+add_image_size( 'blogroll', 768, 512, true );
 add_image_size( 'featured-article', 800, 800, true );
 
 // Remove header right widget area.
@@ -136,9 +137,9 @@ add_action( 'genesis_header', 'genesis_do_nav', 12 );
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 7 );
 
-// Relocate the post info.
-remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-add_action( 'genesis_entry_header', 'genesis_post_info', 5 );
+// Relocate the featured image on archive pages.
+remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
+add_action( 'genesis_entry_header', 'genesis_do_post_image', 5 );
 
 // Reduce the Secondary Navigation menu to one level depth.
 add_filter( 'wp_nav_menu_args', 'hello_pro_secondary_menu_args' );

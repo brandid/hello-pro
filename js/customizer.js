@@ -1,8 +1,10 @@
 ( function( api ) {
     'use strict';
 
+    // Bind an API event to the 'ready' state
     api.bind( 'ready', function() {
 
+        // Call a function based on the 'enable_blog_grid_layout' setting
         api( 'enable_blog_grid_layout', function(setting) {
             var linkSettingValueToControlActiveState;
 

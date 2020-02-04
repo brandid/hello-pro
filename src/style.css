@@ -10,7 +10,7 @@ Version: 3.0.2
 Tags: block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, personal-branding, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
 Template: genesis
-Template Version: 2.9.0
+Template Version: 3.1.0
 
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1659,6 +1659,139 @@ ul#menu-primary-navigation {
 	font-size: 14px;
 	text-transform: uppercase;
 	border-bottom: 0;
+}
+
+/* Custom Blog Layout
+--------------------------------------------- */
+.blog-posts-wrap .blog-posts-wrap-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry {
+	padding: 20px;
+	margin: 0 0 30px 0;
+	background-color: rgba(0,0,0,0.0);
+	transition: all .3s ease-in-out;
+}
+
+.blog-posts-wrap.col-2 .blog-posts-wrap-content .entry,
+.blog-posts-wrap.col-3 .blog-posts-wrap-content .entry,
+.blog-posts-wrap.col-4 .blog-posts-wrap-content .entry {
+	flex-basis: 100%;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry:hover {
+	background-color: rgba(0,0,0,0.03);
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry a.entry-image-link {
+    display: block;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+    border: none;
+	opacity: 0.85;
+	transition: all .3s ease-in-out;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry:hover a.entry-image-link {
+	opacity: 1;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry a.entry-image-link img {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	transform: scale(1.01);
+	transform-origin: center center;
+	transition: all .3s ease-in-out;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry:hover a.entry-image-link img {
+	transform: scale(1.05);
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry .entry-title {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry .entry-meta {
+	margin-bottom: 20px;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .entry .entry-content {
+	font-size: 15px;
+}
+
+.blog-posts-wrap .blog-posts-wrap-content .archive-pagination {
+	flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px){
+
+	.blog-posts-wrap .blog-posts-wrap-content .entry {
+		margin: 0 1% 30px 1%;
+	}
+
+	.blog-posts-wrap.col-2 .blog-posts-wrap-content .entry,
+	.blog-posts-wrap.col-3 .blog-posts-wrap-content .entry,
+	.blog-posts-wrap.col-4 .blog-posts-wrap-content .entry {
+		flex-basis: 48%;
+	}
+
+	.blog-posts-wrap.col-2 .blog-posts-wrap-content .entry .entry-title {
+		font-size: 24px;
+	}
+
+	.blog-posts-wrap.col-3 .blog-posts-wrap-content .entry .entry-title {
+		font-size: 20px;
+	}
+
+	.blog-posts-wrap.col-4 .blog-posts-wrap-content .entry .entry-title {
+		font-size: 18px;
+	}
+
+	.blog-posts-wrap .blog-posts-wrap-content .entry .entry-content {
+		font-size: 16px;
+	}
+
+}
+
+@media screen and (min-width: 1023px) {
+
+	.blog-posts-wrap.col-2 .blog-posts-wrap-content .entry {
+		flex-basis: 48%;
+	}
+
+	.blog-posts-wrap.col-3 .blog-posts-wrap-content .entry {
+		flex-basis: 31%;
+	}
+
+	.blog-posts-wrap.col-4 .blog-posts-wrap-content .entry {
+		flex-basis: 23%;
+	}
+
+	.blog-posts-wrap.col-2 .blog-posts-wrap-content .entry .entry-title {
+		font-size: 28px;
+	}
+
+	.blog-posts-wrap.col-3 .blog-posts-wrap-content .entry .entry-title {
+		font-size: 24px;
+	}
+
+	.blog-posts-wrap.col-4 .blog-posts-wrap-content .entry .entry-title {
+		font-size: 20px;
+	}
+
+	.blog-posts-wrap .blog-posts-wrap-content .entry .entry-content {
+		font-size: 17px;
+	}
+
 }
 
 /* Pagination

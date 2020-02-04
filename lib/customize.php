@@ -155,7 +155,7 @@ function hellopro_register_customizer() {
 	$wp_customize->add_setting(
 		'blog_grid_cols',
 		array(
-			'default'           => 'col-2',
+			'default'           => 'col-3',
 			'type'              => 'theme_mod',
 			'sanitize_callback' => 'hellopro_sanitize_select',
 		)
@@ -267,13 +267,4 @@ add_action( 'customize_controls_enqueue_scripts', 'hellopro_customizer_condition
  */
 function hellopro_customizer_conditional_select() {
 	wp_enqueue_script( 'hellopro-conditionalselect', get_stylesheet_directory_uri() . '/js/customizer.js?v=' . rand(), array( 'customize-controls' ), false );
-}
-
-// Enqueue JS for Customizer Live Preview pane.
-add_action( 'customize_preview_init', 'hellopro_customizer_live_preview' );
-/**
- * Live preview script enqueue
- */
-function hellopro_customizer_live_preview() {
-	wp_enqueue_script( 'hellopro-themecustomizer', get_stylesheet_directory_uri() . '/js/customizer-preview.js?v=' . rand(), array( 'jquery', 'customize-preview' ), false );
 }
