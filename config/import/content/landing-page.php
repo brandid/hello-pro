@@ -138,6 +138,6 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:atomic-blocks/ab-container {"containerPaddingTop":1,"containerPaddingRight":0,"containerPaddingBottom":50,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":660,"containerBackgroundColor":"#fff","containerImgID":55,"containerDimRatio":70,"className":"testimonial"} -->
-<div style="background-color:#fff;padding-bottom:50%;padding-top:1%" class="wp-block-atomic-blocks-ab-container testimonial ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_testimonials_image_url" alt=""/></div><div class="ab-container-content" style="max-width:660px"><!-- wp:social-proof-slider/main {"showarrows":true} /--></div></div></div>
+<div style="background-color:#fff;padding-bottom:50%;padding-top:1%" class="wp-block-atomic-blocks-ab-container testimonial ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_testimonials_image_url" alt=""/></div><div class="ab-container-content" style="max-width:660px"><!-- wp:social-proof-slider/main {"showarrows":true,"arrowshovercolor":"#ce461c"} /--></div></div></div>
 <!-- /wp:atomic-blocks/ab-container -->
 CONTENT;
