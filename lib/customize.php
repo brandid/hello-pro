@@ -266,5 +266,5 @@ add_action( 'customize_controls_enqueue_scripts', 'hellopro_customizer_condition
  * Custom contextual controls
  */
 function hellopro_customizer_conditional_select() {
-	wp_enqueue_script( 'hellopro-conditionalselect', get_stylesheet_directory_uri() . '/js/customizer.js?v=' . rand(), array( 'customize-controls' ), false );
+	wp_enqueue_script( 'hellopro-conditionalselect', get_stylesheet_directory_uri() . '/js/customizer.js?v=' . wp_rand(), array( 'customize-controls' ), CHILD_THEME_VERSION, false );
 }
