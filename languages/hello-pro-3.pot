@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Hello Pro
+# Copyright (C) 2020 Hello Pro
 # This file is distributed under the same license as the Hello Pro package.
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 msgid "Primary Color"
 msgstr ""
 
-#: config/appearance.php:29, lib/customize.php:167
+#: config/appearance.php:29, lib/customize.php:217
 msgid "Secondary Color"
 msgstr ""
 
@@ -69,6 +69,22 @@ msgstr ""
 msgid "Simple Social Icons"
 msgstr ""
 
+#: config/theme-supports.php:35
+msgid "Header Right Menu"
+msgstr ""
+
+#: config/theme-supports.php:36
+msgid "Header Right Menu - Members"
+msgstr ""
+
+#: config/theme-supports.php:37
+msgid "Footer Menu"
+msgstr ""
+
+#: lib/blog-functions.php:101, lib/metaboxes.php:20, lib/metaboxes.php:48
+msgid "Featured Article"
+msgstr ""
+
 #: lib/customize.php:38
 msgid "Site Title Display"
 msgstr ""
@@ -109,15 +125,15 @@ msgstr ""
 msgid "Enable or Disable the list of Blog Categories on Archive pages."
 msgstr ""
 
-#: lib/customize.php:144
+#: lib/customize.php:194
 msgid "Change the main accent color used in various elements in the theme."
 msgstr ""
 
-#: lib/customize.php:145
+#: lib/customize.php:195
 msgid "Primary/Accent Color"
 msgstr ""
 
-#: lib/customize.php:166
+#: lib/customize.php:216
 msgid "Change the hover color for buttons."
 msgstr ""
 
@@ -127,10 +143,6 @@ msgstr ""
 
 #: lib/load-scripts.php:23
 msgid "Submenu"
-msgstr ""
-
-#: lib/metaboxes.php:20, lib/metaboxes.php:48
-msgid "Featured Article"
 msgstr ""
 
 #: lib/widget-setup.php:17
