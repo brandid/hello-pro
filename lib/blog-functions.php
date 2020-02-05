@@ -271,7 +271,7 @@ add_action( 'genesis_before_loop', 'hello_pro_blog_header_output', 20 );
 add_action( 'genesis_before_loop', 'hello_pro_blog_wrapper_open', 30 );
 function hello_pro_blog_wrapper_open() {
 
-	if ( ! is_home() ) {
+	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
@@ -289,6 +289,10 @@ function hello_pro_blog_wrapper_open() {
 // Close the wrapper around the blog posts
 add_action( 'genesis_after_loop', 'hello_pro_blog_wrapper_close', 30 );
 function hello_pro_blog_wrapper_close() {
+
+	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
+		return;
+	}
 
 	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout', true );
 
