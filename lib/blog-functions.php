@@ -267,36 +267,42 @@ function hello_pro_blog_header_output() {
 }
 add_action( 'genesis_before_loop', 'hello_pro_blog_header_output', 20 );
 
-// Open a wrapper around the blog posts
+// Open a wrapper around the blog posts.
 add_action( 'genesis_before_loop', 'hello_pro_blog_wrapper_open', 30 );
+/**
+ * Adds a wrapper div around blog posts.
+ */
 function hello_pro_blog_wrapper_open() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout', true );
-	$colSetting = get_theme_mod( 'blog_grid_cols', 'col-3' );
+	$blog_grid_layout = get_theme_mod( 'enable_blog_grid_layout', true );
+	$col_setting      = get_theme_mod( 'blog_grid_cols', 'col-3' );
 
-	if ( ! empty( $blogGridLayout ) ) {
-		echo '<div class="blog-posts-wrap ' . $colSetting . '">';
+	if ( ! empty( $blog_grid_layout ) ) {
+		echo '<div class="blog-posts-wrap ' . esc_html( $col_setting ) . '">';
 		echo '<div class="alignfull" style="padding: 0 8%;">';
 		echo '<div class="blog-posts-wrap-content">';
 	}
 
 }
 
-// Close the wrapper around the blog posts
+// Close the wrapper around the blog posts.
 add_action( 'genesis_after_loop', 'hello_pro_blog_wrapper_close', 30 );
+/**
+ * Closes the wrapper div around blog posts.
+ */
 function hello_pro_blog_wrapper_close() {
 
 	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
 		return;
 	}
 
-	$blogGridLayout = get_theme_mod( 'enable_blog_grid_layout', true );
+	$blog_grid_layout = get_theme_mod( 'enable_blog_grid_layout', true );
 
-	if ( ! empty( $blogGridLayout ) ) {
+	if ( ! empty( $blog_grid_layout ) ) {
 		echo '</div>';
 		echo '</div>';
 		echo '</div>';
