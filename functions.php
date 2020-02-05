@@ -64,8 +64,8 @@ function genesis_child_gutenberg_support() {
 // Add helper functions.
 require_once get_stylesheet_directory() . '/lib/helper-functions.php';
 
-// Add the blog functions.
-require_once get_stylesheet_directory() . '/lib/blog-functions.php';
-
 // Add scripts and styles.
 require_once get_stylesheet_directory() . '/lib/load-scripts.php';
+
+// Add the blog functions.
+require_once get_stylesheet_directory() . '/lib/blog-functions.php';
