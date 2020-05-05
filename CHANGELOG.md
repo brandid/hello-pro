@@ -2,6 +2,11 @@
 
 ## Changelog
 
+### 3.0.4 - (May 5, 2020)
+* FIXED: Removed repeated footer link CSS styles
+* FIXED: Updated a broken link in the One-Click Theme Setup content
+* FIXED: Removed unused One-Click Theme Setup blocks on the Blog page (this content doesn't display on Archive pages)
+
 ### 3.0.3 - (Feb 5, 2020)
 * ADDED: We've added two new optional features to the theme! These new features can be configured using the Customizer:
 * - A 'Featured Articles' carousel, which is shown on the Blog archive pages. Showcase your important blog posts in an attractive, responsive carousel slider.
