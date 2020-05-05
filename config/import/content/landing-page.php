@@ -1,6 +1,8 @@
 <?php
 /**
- * Hello! Pro - Demo LANDING page One-Click Theme Setup content
+ * Hello! Pro - Demo LANDING page One-Click Theme Setup content.
+ *
+ * Landing Page content.
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *

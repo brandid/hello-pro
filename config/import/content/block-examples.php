@@ -1,6 +1,8 @@
 <?php
 /**
- * Hello! Pro - Demo BLOCKS page One-Click Theme Setup content
+ * Hello! Pro - Demo BLOCKS page One-Click Theme Setup content.
+ *
+ * Block Examples content.
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *

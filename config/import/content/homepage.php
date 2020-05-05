@@ -1,8 +1,10 @@
 <?php
 /**
- * Hello! Pro - Demo HOME page One-Click Theme Setup content
+ * Hello! Pro - Demo HOME page One-Click Theme Setup content.
  *
- * Homepage content optionally installed after theme activation.
+ * Homepage content.
+ *
+ * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
  * @package Hello Pro
  * @author  StudioPress
