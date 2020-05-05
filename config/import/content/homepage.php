@@ -114,7 +114,7 @@ return <<<CONTENT
 <!-- /wp:atomic-blocks/ab-container -->
 
 <!-- wp:cover {"url":"$hello_pro_homepage_statement_image_url","id":45,"dimRatio":30,"overlayColor":"black","align":"full","className":"statement"} -->
-<div class="wp-block-cover alignfull has-background-dim-30 has-black-background-color has-background-dim statement" style="background-image:url(http://localhost/hellopro3-dev/wp-content/themes/hello-pro-3/config/import/images/home-statement-default.jpg)"><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"left","placeholder":"Write title…","fontSize":"huge"} -->
+<div class="wp-block-cover alignfull has-background-dim-30 has-black-background-color has-background-dim statement" style="background-image:url($hello_pro_homepage_statement_image_url)"><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"left","placeholder":"Write title…","fontSize":"huge"} -->
 <p style="text-align:left" class="has-huge-font-size">MAKE A<br><strong>BOLD</strong><br>STATEMENT.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:cover -->
