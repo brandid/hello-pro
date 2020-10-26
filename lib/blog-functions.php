@@ -213,7 +213,16 @@ function hello_pro_show_featured_articles() {
  */
 function hello_pro_blog_header_output() {
 
-	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
+	// Set variable to track if this page should show theme blog extras.
+	$this_is_slider_page = false;
+
+	// Set var to true if this is the blog Homepage, if this is the blog page, or if this is an Archive page.
+	if ( ( is_front_page() && is_home() ) || is_home() || is_archive() ) {
+		$this_is_slider_page = true;
+	}
+
+	// If this page should not show theme blog extras, return null.
+	if ( ! $this_is_slider_page ) {
 		return;
 	}
 
