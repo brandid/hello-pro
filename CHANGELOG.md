@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 3.0.5 - (Oct 26, 2020)
+* FIXED: Allows blog extras to display on the Blog Homepage
+
 ### 3.0.4 - (May 5, 2020)
 * FIXED: Removed repeated footer link CSS styles
 * FIXED: Updated a broken link in the One-Click Theme Setup content
