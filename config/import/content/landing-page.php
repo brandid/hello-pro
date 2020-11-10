@@ -23,69 +23,71 @@ $hello_pro_landingpage_testimonials_image_url = CHILD_URL . '/config/import/imag
 
 // Begin Creating Content Output.
 return <<<CONTENT
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#fff","containerImgID":14,"containerDimRatio":70,"className":"welcome"} -->
-<div style="background-color:#fff;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container welcome ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_welcome_image_url" alt=""/></div><div class="ab-container-content" style="max-width:1200px"><!-- wp:paragraph {"align":"left","fontSize":"huge"} -->
-<p style="text-align:left" class="has-huge-font-size">Life is a<strong> Journey</strong><br>Not a <strong>Destination</strong>.</p>
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":10,"containerPaddingRight":4,"containerPaddingBottom":10,"containerPaddingLeft":4,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":1200,"containerImgID":766,"containerDimRatio":70,"align":"full","className":"welcome"} -->
+<div style="padding-left:4%;padding-right:4%;padding-bottom:10%;padding-top:10%" class="wp-block-genesis-blocks-gb-container alignfull welcome gb-block-container"><div class="gb-container-inside"><div class="gb-container-image-wrap"><img class="gb-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_welcome_image_url" alt=""/></div><div class="gb-container-content" style="max-width:1200px"><!-- wp:paragraph {"align":"left","fontSize":"huge"} -->
+<p class="has-text-align-left has-huge-font-size">Life is a<strong> Journey</strong><br>Not a <strong>Destination</strong>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"left"} -->
-<p style="text-align:left">Find your purpose with my Instructional Courses.</p>
+<p class="has-text-align-left">Find your purpose with my Instructional Courses.</p>
 <!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- /wp:genesis-blocks/gb-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":660,"containerBackgroundColor":"#fffcf5"} -->
-<div style="background-color:#fffcf5;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:660px"><!-- wp:paragraph -->
-<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":680,"containerBackgroundColor":"#fffcf5","align":"full"} -->
+<div style="background-color:#fffcf5;padding-bottom:10%;padding-top:10%" class="wp-block-genesis-blocks-gb-container alignfull gb-block-container"><div class="gb-container-inside"><div class="gb-container-content" style="max-width:680px"><!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
-<!-- /wp:button --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- wp:buttons {"align":"center"} -->
+<div class="wp-block-buttons aligncenter"><!-- wp:button {"borderRadius":0} -->
+<div class="wp-block-button"><a class="wp-block-button__link no-border-radius" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div></div>
+<!-- /wp:genesis-blocks/gb-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingBottom":5,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1200,"containerBackgroundColor":"#f5f2eb"} -->
-<div style="background-color:#f5f2eb;padding-bottom:5%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1200px"><!-- wp:atomic-blocks/ab-columns {"columns":2,"layout":"ab-2-col-equal"} -->
-<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-2 ab-2-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column -->
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:heading {"level":3} -->
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":10,"containerPaddingBottom":5,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":1200,"containerBackgroundColor":"#f5f2eb","align":"full"} -->
+<div style="background-color:#f5f2eb;padding-bottom:5%;padding-top:10%" class="wp-block-genesis-blocks-gb-container alignfull gb-block-container"><div class="gb-container-inside"><div class="gb-container-content" style="max-width:1200px"><!-- wp:genesis-blocks/gb-columns {"columns":2,"layout":"gb-2-col-equal"} -->
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-equal"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner"><!-- wp:heading {"level":3} -->
 <h3>Course Description</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left"} -->
-<p style="text-align:left">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
+<p class="has-text-align-left">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
 <!-- /wp:paragraph --></div></div>
-<!-- /wp:atomic-blocks/ab-column -->
+<!-- /wp:genesis-blocks/gb-column -->
 
-<!-- wp:atomic-blocks/ab-column -->
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:heading {"level":3} -->
+<!-- wp:genesis-blocks/gb-column -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner"><!-- wp:heading {"level":3} -->
 <h3>Course Requirements</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left"} -->
-<p style="text-align:left">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
+<p class="has-text-align-left">This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
 <!-- /wp:paragraph --></div></div>
-<!-- /wp:atomic-blocks/ab-column --></div></div>
-<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- /wp:genesis-blocks/gb-column --></div></div>
+<!-- /wp:genesis-blocks/gb-columns --></div></div></div>
+<!-- /wp:genesis-blocks/gb-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":12,"containerPaddingBottom":10,"containerPaddingLeft":12,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1000,"containerBackgroundColor":"#313131","containerImgID":27,"containerDimRatio":70,"className":"opt-in"} -->
-<div style="background-color:#313131;padding-left:12%;padding-right:12%;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container opt-in ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_optin_image_url" alt=""/></div><div class="ab-container-content" style="max-width:1000px"><!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"huge"} -->
-<p style="text-align:center" class="has-text-color has-huge-font-size has-primary-color">Sign Up Today.</p>
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":10,"containerPaddingRight":12,"containerPaddingBottom":10,"containerPaddingLeft":12,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":1000,"containerBackgroundColor":"#333","containerImgID":947,"containerDimRatio":70,"align":"full","className":"opt-in"} -->
+<div style="background-color:#333;padding-left:12%;padding-right:12%;padding-bottom:10%;padding-top:10%" class="wp-block-genesis-blocks-gb-container alignfull opt-in gb-block-container"><div class="gb-container-inside"><div class="gb-container-image-wrap"><img class="gb-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_optin_image_url" alt=""/></div><div class="gb-container-content" style="max-width:1000px"><!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"huge"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-huge-font-size">Sign Up Today.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","textColor":"white"} -->
-<p style="text-align:center" class="has-text-color has-white-color"><strong>Put your tantalizing opt-in copy here, and watch your email list grow faster than magic beanstalks.</strong></p>
+<p class="has-text-align-center has-white-color has-text-color"><strong>Put your tantalizing opt-in copy here, and watch your email list grow faster than magic beanstalks.</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"align":"center","textColor":"white"} -->
-<p style="text-align:center" class="has-text-color has-white-color">To display an Opt-in form, simply install your favorite Forms plugin. Then, replace this text with your Form Shortcode or Block.</p>
-<!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- wp:shortcode -->
+[gravityform id="3" title="false" description="false" ajax="true"]
+<!-- /wp:shortcode --></div></div></div>
+<!-- /wp:genesis-blocks/gb-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":1060,"containerBackgroundColor":"#fffcf5"} -->
-<div style="background-color:#fffcf5;padding-bottom:10%;padding-top:10%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1060px"><!-- wp:atomic-blocks/ab-columns {"columns":3,"layout":"ab-3-col-equal"} -->
-<div class="wp-block-atomic-blocks-ab-columns ab-layout-columns-3 ab-3-col-equal"><div class="ab-layout-column-wrap ab-block-layout-column-gap-2 ab-is-responsive-column"><!-- wp:atomic-blocks/ab-column -->
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
-<p class="has-text-color has-small-font-size has-primary-color text-subhead">Course #1:</p>
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":10,"containerPaddingRight":0,"containerPaddingBottom":10,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":1060,"containerBackgroundColor":"#fffcf5","align":"full"} -->
+<div style="background-color:#fffcf5;padding-bottom:10%;padding-top:10%" class="wp-block-genesis-blocks-gb-container alignfull gb-block-container"><div class="gb-container-inside"><div class="gb-container-content" style="max-width:1060px"><!-- wp:genesis-blocks/gb-columns {"columns":3,"layout":"gb-3-col-equal"} -->
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-3 gb-3-col-equal"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner"><!-- wp:paragraph {"className":"text-subhead","textColor":"primary","fontSize":"small"} -->
+<p class="text-subhead has-primary-color has-text-color has-small-font-size">Course #1:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -93,17 +95,19 @@ return <<<CONTENT
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
+<p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
-<!-- /wp:button --></div></div>
-<!-- /wp:atomic-blocks/ab-column -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"borderRadius":0} -->
+<div class="wp-block-button"><a class="wp-block-button__link no-border-radius" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:genesis-blocks/gb-column -->
 
-<!-- wp:atomic-blocks/ab-column -->
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
-<p class="has-text-color has-small-font-size has-primary-color text-subhead">Course #2:</p>
+<!-- wp:genesis-blocks/gb-column -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner"><!-- wp:paragraph {"className":"text-subhead","textColor":"primary","fontSize":"small"} -->
+<p class="text-subhead has-primary-color has-text-color has-small-font-size">Course #2:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -114,14 +118,16 @@ return <<<CONTENT
 <p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
-<!-- /wp:button --></div></div>
-<!-- /wp:atomic-blocks/ab-column -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"borderRadius":0} -->
+<div class="wp-block-button"><a class="wp-block-button__link no-border-radius" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:genesis-blocks/gb-column -->
 
-<!-- wp:atomic-blocks/ab-column -->
-<div class="wp-block-atomic-blocks-ab-column ab-block-layout-column"><div class="ab-block-layout-column-inner"><!-- wp:paragraph {"textColor":"primary","fontSize":"small","className":"text-subhead"} -->
-<p class="has-text-color has-small-font-size has-primary-color text-subhead">Course #3:</p>
+<!-- wp:genesis-blocks/gb-column -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner"><!-- wp:paragraph {"className":"text-subhead","textColor":"primary","fontSize":"small"} -->
+<p class="text-subhead has-primary-color has-text-color has-small-font-size">Course #3:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -132,14 +138,18 @@ return <<<CONTENT
 <p>This is an example of a WordPress post, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many posts as you like in order to share with your readers what exactly is on your mind. </p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"className":"is-style-squared"} -->
-<div class="wp-block-button is-style-squared"><a class="wp-block-button__link" href="#">Sign Up Now</a></div>
-<!-- /wp:button --></div></div>
-<!-- /wp:atomic-blocks/ab-column --></div></div>
-<!-- /wp:atomic-blocks/ab-columns --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"borderRadius":0} -->
+<div class="wp-block-button"><a class="wp-block-button__link no-border-radius" href="#">Sign Up Now</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:genesis-blocks/gb-column --></div></div>
+<!-- /wp:genesis-blocks/gb-columns --></div></div></div>
+<!-- /wp:genesis-blocks/gb-container -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":1,"containerPaddingRight":0,"containerPaddingBottom":50,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerMaxWidth":660,"containerBackgroundColor":"#fff","containerImgID":55,"containerDimRatio":70,"className":"testimonial"} -->
-<div style="background-color:#fff;padding-bottom:50%;padding-top:1%" class="wp-block-atomic-blocks-ab-container testimonial ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-image-wrap"><img class="ab-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_testimonials_image_url" alt=""/></div><div class="ab-container-content" style="max-width:660px"><!-- wp:social-proof-slider/main {"showarrows":true,"arrowshovercolor":"#ce461c"} /--></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":1,"containerPaddingRight":0,"containerPaddingBottom":30,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":660,"containerImgID":946,"containerDimRatio":70,"align":"full","className":"testimonial"} -->
+<div style="padding-bottom:30%;padding-top:1%" class="wp-block-genesis-blocks-gb-container alignfull testimonial gb-block-container"><div class="gb-container-inside"><div class="gb-container-image-wrap"><img class="gb-container-image has-background-dim-70 has-background-dim" src="$hello_pro_landingpage_testimonials_image_url" alt=""/></div><div class="gb-container-content" style="max-width:660px"><!-- wp:shortcode -->
+[social-proof-slider]
+<!-- /wp:shortcode --></div></div></div>
+<!-- /wp:genesis-blocks/gb-container -->
 CONTENT;

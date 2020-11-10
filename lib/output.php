@@ -168,7 +168,8 @@ function hello_pro_inline_color_palette() {
 		}
 
 		.wp-block-button .wp-block-button__link.has-primary-background-color,
-		.ab-block-button > .ab-button  {
+		.ab-block-button > .ab-button,
+		.gb-block-button > .gb-button  {
 			background-color: %1$s !important;
 			color: %2$s !important;
 		}

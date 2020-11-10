@@ -283,7 +283,7 @@ add_action( 'genesis_before_loop', 'hello_pro_blog_wrapper_open', 30 );
  */
 function hello_pro_blog_wrapper_open() {
 
-	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
+	if ( ! is_home() && ! is_archive() ) {
 		return;
 	}
 
@@ -305,7 +305,7 @@ add_action( 'genesis_after_loop', 'hello_pro_blog_wrapper_close', 30 );
  */
 function hello_pro_blog_wrapper_close() {
 
-	if ( genesis_is_root_page() || ! is_home() && ! is_archive() ) {
+	if ( ! is_home() && ! is_archive() ) {
 		return;
 	}
 

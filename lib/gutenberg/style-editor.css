@@ -488,6 +488,16 @@ hr.wp-block-separator.is-style-dots {
     text-transform: uppercase;
 }
 
+/* Genesis Blocks - Button */
+.gb-block-button .gb-button {
+    padding: 1em;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
 /* Galleries
 ---------------------------------------------------------------------------- */
 
@@ -545,6 +555,12 @@ hr.wp-block-separator.is-style-dots {
 /* Atomic Blocks - Container
 --------------------------------------------- */
 [data-type="atomic-blocks/ab-container"] > .editor-block-list__block-edit {
+    border: 2px dotted #ccc;
+}
+
+/* Genesis Blocks - Container
+--------------------------------------------- */
+[data-type="genesis-blocks/gb-container"] > .editor-block-list__block-edit {
     border: 2px dotted #ccc;
 }
 
@@ -713,11 +729,24 @@ p.has-huge-font-size.title {
 	margin-right: 0;
 }
 
+/* GB ADVANCED COLUMNS BLOCK
+--------------------------------------------- */
+.block-editor-block-list__layout .block-editor-block-list__block[data-type="genesis-blocks/gb-columns"][data-align="full"] {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 /* MEDIA QUERIES
 ----------------------------------------------------------------------------- */
 @media only screen and (min-width: 960px) {
 
     .alignwide:not(.wp-block-atomic-blocks-ab-columns) {
+        margin-left: -180px;
+        margin-right: -180px;
+        max-width: 1062px;
+    }
+
+	.alignwide:not(.wp-block-genesis-blocks-gb-columns) {
         margin-left: -180px;
         margin-right: -180px;
         max-width: 1062px;

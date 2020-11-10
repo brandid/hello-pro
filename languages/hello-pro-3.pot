@@ -57,10 +57,6 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: config/onboarding.php:17
-msgid "Atomic Blocks"
-msgstr ""
-
 #: config/onboarding.php:22
 msgid "Social Proof Slider"
 msgstr ""

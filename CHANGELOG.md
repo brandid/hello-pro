@@ -2,8 +2,12 @@
 
 ## Changelog
 
+### 3.0.6 - (Nov 9, 2020)
+* FIXED: Genesis Blocks update! Now the theme uses Genesis Blocks in place of the Atomic Blocks plugin used previously. If you use the One-Click Theme Setup feature, your Demo pages will now be built with Genesis Blocks. We've also migrated our custom Atomic Blocks styles over to the Genesis Blocks plugin.
+* FIXED: Forces layout to obey the Customizer setting for "Blog Grid Columns" when the Blog is set to be the Homepage
+
 ### 3.0.5 - (Oct 26, 2020)
-* FIXED: Allows blog extras to display on the Blog Homepage
+* FIXED: Allows blog extras to display when the Blog is set to be the Homepage
 
 ### 3.0.4 - (May 5, 2020)
 * FIXED: Removed repeated footer link CSS styles

@@ -40,7 +40,8 @@ ul.aligncenter li {
 
 /* First Blocks
 --------------------------------------------- */
-.first-block-atomic-blocks-ab-container main.content {
+.first-block-atomic-blocks-ab-container main.content,
+.first-block-genesis-blocks-gb-container main.content {
     padding-top: 0;
 }
 
@@ -195,7 +196,7 @@ ul.aligncenter li {
     border-color: inherit;
 }
 
-/* Atomic Blocks - Button */
+/* Atomic Blocks buttons */
 .ab-block-button .ab-button {
     padding: 1em;
     letter-spacing: 2px;
@@ -210,10 +211,28 @@ ul.aligncenter li {
 	font-weight: 700;
 }
 
+/* Genesis Blocks buttons */
+.gb-block-button .gb-button {
+    padding: 1em;
+    letter-spacing: 2px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+}
+
+.gb-block-button .gb-button {
+	background-color: #ce461c;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+}
+
+/* All buttons */
 .wp-block-button .wp-block-button__link:focus,
 .wp-block-button .wp-block-button__link:hover,
 .ab-block-button .ab-button:focus,
-.ab-block-button .ab-button:hover {
+.ab-block-button .ab-button:hover,
+.gb-block-button .gb-button:focus,
+.gb-block-button .gb-button:hover {
 	background-color: #53796e;
 	color: #fff;
 }
@@ -523,6 +542,36 @@ pre.wp-block-code {
 	}
 
 	.ab-block-container.alignfull::after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
+
+}
+
+/* Genesis Blocks
+--------------------------------------------- */
+
+.gb-block-post-grid h2 a {
+	text-decoration: none;
+}
+
+.wp-block-genesis-blocks-gb-columns.alignfull {
+    padding: 0 30px;
+}
+
+.wp-block-genesis-blocks-gb-columns.alignfull > .gb-layout-column-wrap {
+    margin: 0 15px;
+}
+
+@media only screen and (max-width: 510px) {
+
+    .gb-block-container.alignfull::before {
+		content: " ";
+		display: table;
+	}
+
+	.gb-block-container.alignfull::after {
 		clear: both;
 		content: " ";
 		display: table;

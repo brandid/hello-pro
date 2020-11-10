@@ -14,9 +14,9 @@ return array(
 	'dependencies'     => array(
 		'plugins' => array(
 			array(
-				'name'       => __( 'Atomic Blocks', 'hello-pro' ),
-				'slug'       => 'atomic-blocks/atomicblocks.php',
-				'public_url' => 'https://atomicblocks.com/',
+				'name'       => __( 'Genesis Blocks', 'coursemaker' ),
+				'slug'       => 'genesis-blocks/genesis-blocks.php',
+				'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
 			),
 			array(
 				'name'       => __( 'Social Proof Slider', 'hello-pro' ),
@@ -50,15 +50,6 @@ return array(
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
-		'blog'                 => array(
-			'post_title'     => 'Blog',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog.php',
-			'post_type'      => 'page',
-			'post_status'    => 'publish',
-			'comment_status' => 'closed',
-			'ping_status'    => 'closed',
-			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
-		),
 		'blocks'   => array(
 			'post_title'     => 'Block Content Examples',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/block-examples.php',
@@ -67,6 +58,15 @@ return array(
 			'page_template'  => 'page-templates/blocks.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
+		),
+		'blog'                 => array(
+			'post_title'     => 'Blog',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog.php',
+			'post_type'      => 'page',
+			'post_status'    => 'publish',
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+			'meta_input'     => array( '_genesis_layout' => 'full-width-content' ),
 		),
 		'landing'  => array(
 			'post_title'     => 'Landing Page',
