@@ -66,9 +66,9 @@ return <<<CONTENT
 <p class="has-text-align-center has-white-color has-text-color"><strong>Put your tantalizing opt-in copy here, and watch your email list grow faster than magic beanstalks.</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:shortcode -->
-[gravityform id="2" title="false" description="false" ajax="true"]
-<!-- /wp:shortcode --></div></div></div>
+<!-- wp:paragraph {"align":"center","textColor":"white"} -->
+<p class="has-text-align-center has-white-color has-text-color"><strong>Replace this block with a Contact Form!</strong></p>
+<!-- /wp:paragraph --></div></div></div>
 <!-- /wp:genesis-blocks/gb-container -->
 
 <!-- wp:genesis-blocks/gb-container {"containerPaddingTop":10,"containerPaddingRight":2,"containerPaddingBottom":10,"containerPaddingLeft":2,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":1060,"containerBackgroundColor":"#fffcf5","align":"full","className":"features"} -->

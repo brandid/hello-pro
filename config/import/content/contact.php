@@ -38,8 +38,8 @@ return <<<CONTENT
 <div style="color:#ddd" class="wp-block-genesis-blocks-gb-spacer gb-block-spacer gb-divider-solid gb-spacer-divider gb-divider-size-1"><hr style="height:40px"/></div>
 <!-- /wp:genesis-blocks/gb-spacer -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":10,"containerPaddingBottom":5,"containerPaddingLeft":10,"containerMaxWidth":1600,"containerBackgroundColor":"#f4f4f4"} -->
-<div style="background-color:#f4f4f4;padding-left:10%;padding-right:10%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:heading {"align":"center"} -->
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":5,"containerPaddingRight":10,"containerPaddingBottom":5,"containerPaddingLeft":10,"containerMaxWidth":1600,"containerBackgroundColor":"#f4f4f4"} -->
+<div style="background-color:#f4f4f4;padding-left:10%;padding-right:10%;padding-bottom:5%;padding-top:5%" class="wp-block-genesis-blocks-gb-container gb-block-container"><div class="gb-container-inside"><div class="gb-container-content" style="max-width:1600px"><!-- wp:heading {"textAlign":"center"} -->
 <h2 class="has-text-align-center">Contact Me</h2>
 <!-- /wp:heading -->
 
@@ -50,15 +50,15 @@ return <<<CONTENT
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center">1234 Block Blvd.<br>San Francisco, CA 94120</p>
 <!-- /wp:paragraph --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- /wp:genesis-blocks/gb-container -->
 
 <!-- wp:genesis-blocks/gb-spacer {"spacerHeight":40} -->
 <div style="color:#ddd" class="wp-block-genesis-blocks-gb-spacer gb-block-spacer gb-divider-solid gb-divider-size-1"><hr style="height:40px"/></div>
 <!-- /wp:genesis-blocks/gb-spacer -->
 
-<!-- wp:shortcode -->
-[gravityform id="1" title="true" description="false" ajax="true"]
-<!-- /wp:shortcode -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Replace this block with a Contact Form!</p>
+<!-- /wp:paragraph -->
 
 <!-- wp:genesis-blocks/gb-spacer {"spacerHeight":40} -->
 <div style="color:#ddd" class="wp-block-genesis-blocks-gb-spacer gb-block-spacer gb-divider-solid gb-divider-size-1"><hr style="height:40px"/></div>

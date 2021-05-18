@@ -42,8 +42,8 @@ return <<<CONTENT
 <p>Hello! I'm StudioPress, and I build themes with an emphasis on typography, white space, and mobile-optimized design to make your website look absolutely breathtaking. Hello! I'm StudioPress, and I build themes with an emphasis on typography, white space, and mobile-optimized design to make your website look absolutely breathtaking.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":5,"containerPaddingRight":10,"containerPaddingBottom":5,"containerPaddingLeft":10,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"center","containerMaxWidth":1600,"containerBackgroundColor":"#f4f4f4"} -->
-<div style="background-color:#f4f4f4;padding-left:10%;padding-right:10%;padding-bottom:5%;padding-top:5%" class="wp-block-atomic-blocks-ab-container ab-block-container aligncenter"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:heading {"align":"center"} -->
+<!-- wp:genesis-blocks/gb-container {"containerPaddingTop":5,"containerPaddingRight":10,"containerPaddingBottom":5,"containerPaddingLeft":10,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"center","containerMaxWidth":1600,"containerBackgroundColor":"#f4f4f4"} -->
+<div style="background-color:#f4f4f4;padding-left:10%;padding-right:10%;padding-bottom:5%;padding-top:5%" class="wp-block-genesis-blocks-gb-container gb-block-container aligncenter"><div class="gb-container-inside"><div class="gb-container-content" style="max-width:1600px"><!-- wp:heading {"textAlign":"center"} -->
 <h2 class="has-text-align-center" id="mce_9">Contact Me</h2>
 <!-- /wp:heading -->
 
@@ -60,7 +60,7 @@ return <<<CONTENT
 <div class="wp-block-button"><a class="wp-block-button__link" href="$hello_pro_contact_page_url">Contact me</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- /wp:genesis-blocks/gb-container -->
 
 <!-- wp:genesis-blocks/gb-spacer {"spacerHeight":40} -->
 <div style="color:#ddd" class="wp-block-genesis-blocks-gb-spacer gb-block-spacer gb-divider-solid gb-divider-size-1"><hr style="height:40px"/></div>

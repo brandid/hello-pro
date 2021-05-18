@@ -5,7 +5,7 @@ Description: Creating an eye-catching, attention-grabbing, personal branded site
 Author: brandiD
 Author URI: https://thebrandid.com/
 
-Version: 3.0.6
+Version: 3.0.7
 
 Tags: block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, left-sidebar, one-column, personal-branding, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
 
@@ -2422,6 +2422,13 @@ input:focus[type="submit"],
 .site-footer .genesis-nav-menu a:focus,
 .site-footer .genesis-nav-menu a:hover {
 	border-bottom-color: inherit;
+}
+
+/* Custom Blocks
+--------------------------------------------- */
+.wp-block-buttons.aligncenter {
+    -ms-flex-pack: center;
+        justify-content: center;
 }
 
 /* Media Queries
