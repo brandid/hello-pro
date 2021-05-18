@@ -174,8 +174,6 @@ return <<<CONTENT
 <!-- /wp:genesis-blocks/gb-container -->
 
 <!-- wp:genesis-blocks/gb-container {"containerPaddingTop":1,"containerPaddingRight":0,"containerPaddingBottom":30,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerMaxWidth":660,"containerImgID":624,"containerDimRatio":70,"align":"full","className":"testimonial"} -->
-<div style="padding-bottom:30%;padding-top:1%" class="wp-block-genesis-blocks-gb-container alignfull testimonial gb-block-container"><div class="gb-container-inside"><div class="gb-container-image-wrap"><img class="gb-container-image has-background-dim-70 has-background-dim" src="$hello_pro_homepage_testimonials_image_url" alt=""/></div><div class="gb-container-content" style="max-width:660px"><!-- wp:shortcode -->
-[social-proof-slider]
-<!-- /wp:shortcode --></div></div></div>
+<div style="padding-bottom:30%;padding-top:1%" class="wp-block-genesis-blocks-gb-container alignfull testimonial gb-block-container"><div class="gb-container-inside"><div class="gb-container-image-wrap"><img class="gb-container-image has-background-dim-70 has-background-dim" src="$hello_pro_homepage_testimonials_image_url" alt=""/></div><div class="gb-container-content" style="max-width:660px"><!-- wp:social-proof-slider/main {"showdots":true,"padding":0,"dotscolor":"#ce461c"} /--></div></div></div>
 <!-- /wp:genesis-blocks/gb-container -->
 CONTENT;

@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 3.0.8 - (May 18, 2021)
+* FIX: Updated the One-Click Theme Setup demo content to use 'SP Slider' blocks in place of shortcode blocks.
+
 ### 3.0.7 - (May 18, 2021)
 * FIX: Updated the One-Click Theme Setup demo content and removed all instances of Atomic Blocks.
 * FIX: Removed the GravityForms shortcodes from the One-Click Theme Setup demo content.
